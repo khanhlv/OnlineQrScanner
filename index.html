@@ -44,9 +44,6 @@
 				<div class="app__dialog-actions">
 					<button type="button" class="app__dialog-open" id="app__open"><img src="assets/img/url.svg" /><span>Open URL</span></button>
 				</div>
-				<div class="app__dialog-actions">
-					<button type="button" class="app__dialog-open app__dialog-edit"><img src="assets/img/qrcodeeditor.svg" /><span>Edit QR Code</span></button>
-				</div>
 			</div>
         </div>
 		
@@ -232,6 +229,12 @@
                     document.querySelector(".app__qrcode").classList.add("app__dialog--hide");
                     document.querySelector(".modal-backdrop").classList.remove("in");
                     scanner.start();
+                };
+				
+				var qrcodeopenurl = document.querySelector(".app__dialog-open");
+                qrcodeopenurl.onclick = function () {
+                    const app__result = document.getElementById("result");
+                    window.open(app__result.value);
                 };
                 
             });

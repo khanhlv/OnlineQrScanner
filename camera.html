@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#ffffff" />
+		
+		<title>Online QR Code Scanner</title>
+        <meta name="description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes. High-speed scanning, No need to install, Scan editing." />
+        <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code" />
+        
+        <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes." />
+        <meta property="og:title" content="Online QR Code Scanner" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+
+        <link href="assets/css/styles.css" rel="stylesheet" />
+        
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/cookie.js"></script>
+        <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
+    </head>
+    <body>
+        <div class="app__layout">
+            <main class="app__layout-content" id="video-container">
+                <video id="qr-video"></video>
+                <div class="scan-region-highlight">
+                    <svg class="scan-region-highlight-svg" viewBox="0 0 238 238" preserveAspectRatio="none"><path d="M31 2H10a8 8 0 0 0-8 8v21M207 2h21a8 8 0 0 1 8 8v21m0 176v21a8 8 0 0 1-8 8h-21m-176 0H10a8 8 0 0 1-8-8v-21"></path></svg>
+                    <svg class="code-outline-highlight" preserveAspectRatio="none" style="display: none; width: 100%; height: 100%; fill: none; stroke: #fff; stroke-width: 5; stroke-dasharray: 25; stroke-linecap: round; stroke-linejoin: round; position: absolute;">
+                        <polygon></polygon>
+                    </svg>
+                </div>
+				
+				<div class="app__dialog app__qrcode app__dialog--hide">
+					<div class="app__dialog-content">
+						<h5>QR Code</h5>
+						<img src="assets/img/close.svg" class="app__dialog-close" />
+						<input type="text" id="result" />
+						<button type="button" class="btn" data-original-title="Copied!" data-clipboard-target="#result" style="display: block; margin: auto;font-size: 14px;font-weight: 300;outline: none;cursor: pointer;color: #fff;border-radius: 3px;padding: 5px 12px;line-height: 20px;background-color: #21262d;border: 1px solid #30363d;">Copy</button>
+					</div>
+					<div class="app__dialog-actions">
+						<button type="button" class="app__dialog-open" id="app__open"><img src="assets/img/url.svg" /><span>Open URL</span></button>
+					</div>
+				</div>
+				<img src="" style="display: none;" id="frame" class="app__overlay" />
+            </main>
+        </div>
+		
+		<div class="app__overlay">
+            <div class="app__overlay-frame"></div>
+            <div class="custom-scanner" style="display: block;"></div>
+            <div class="app__help-text"></div>
+        </div>
+       
+        <div class="modal-backdrop"></div>
+        <div style="z-index: 111; position: fixed; display: none;">
+            <span id="cam-has-camera"></span>
+			<span id="cam-has-flash"></span>
+			<video id="qr-video"></video>
+			<input id="show-scan-region" type="checkbox" />
+            <select id="inversion-mode-select">
+                <option value="original">Scan original (dark QR code on bright background)</option>
+                <option value="invert">Scan with inverted colors (bright QR code on dark background)</option>
+                <option value="both">Scan both</option>
+            </select>
+            <span id="cam-qr-result">None</span>
+			<span id="cam-qr-result-timestamp"></span>
+			<button id="start-button">Start</button>
+			<button id="stop-button">Stop</button>
+			<input type="file" id="file-selector" />
+            <span id="file-qr-result">None</span>
+        </div>
+        
+        
+        <script type="module">
+			var clipboard = new ClipboardJS('.btn');
+
+			clipboard.on('success', function(e) {
+				e.clearSelection();
+			});
+			
+            import QrScanner from "./assets/js/qr-scanner.min.js";
+            QrScanner.WORKER_PATH = "./assets/js/qr-scanner-worker.min.js";
+            $(document).ready(function () {
+				
+                const video = document.getElementById("qr-video");
+                const videoContainer = document.getElementById("video-container");
+                const camHasCamera = document.getElementById("cam-has-camera");
+                const camHasFlash = document.getElementById("cam-has-flash");
+                const flashToggle = document.getElementById("flash-toggle");
+                const flashState = document.getElementById("flash-state");
+                const camQrResult = document.getElementById("cam-qr-result");
+                const camQrResultTimestamp = document.getElementById("cam-qr-result-timestamp");
+                const fileSelector = document.getElementById("file-selector");
+                const fileQrResult = document.getElementById("file-qr-result");
+                const customscanner = document.querySelector(".custom-scanner");
+                const appimage = document.getElementById("frame");
+                const appopen = document.getElementById("app__open");
+				const qrcodeclose = document.querySelector(".app__dialog-close");
+                function CheckUrl(URL) {
+                    var str = URL;
+                    var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+                    var objExp = new RegExp(Expression);
+                    if (objExp.test(str) == true) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                function unique(arr) {
+                    var array = [];
+                    for (var i = 0; i < arr.length; i++) {
+                        if (array.indexOf(arr[i]) === -1) {
+                            array.push(arr[i]);
+                        }
+                    }
+                    return array;
+                }
+                function setResult(label, result) {
+                    const app__qrcode = document.querySelector(".app__qrcode");
+                    const app__result = document.getElementById("result");
+                    label.textContent = result;
+                    if (result !== "No QR code found" || result !== "") {
+                        customscanner.style.display = "none";
+                        if (label.id == "file-qr-result") {
+                            appimage.style.display = "block";
+                        }
+                        if (CheckUrl(result) == true) {
+                            appopen.style.display = "block";
+                        }
+                        app__result.value = result;
+                        
+                        if (result.length > 0) {
+                            app__qrcode.classList.remove("app__dialog--hide");
+                            document.querySelector(".modal-backdrop").classList.add("in");
+                        }
+                    }
+                    camQrResultTimestamp.textContent = new Date().toString();
+                    label.style.color = "teal";
+                    clearTimeout(label.highlightTimeout);
+                    label.highlightTimeout = setTimeout(() => (label.style.color = "inherit"), 100);
+                }
+                
+                QrScanner.hasCamera().then((hasCamera) => (camHasCamera.textContent = hasCamera));
+                const scanner = new QrScanner(
+                    video,
+                    (result) => setResult(camQrResult, result),
+                    (error) => {
+                        camQrResult.textContent = error;
+                        camQrResult.style.color = "inherit";
+                    }
+                );
+                scanner.start().then(() => {
+                    scanner.hasFlash().then((hasFlash) => {
+                        customscanner.style.display = "block";
+                        camHasFlash.textContent = hasFlash;
+                        if (hasFlash) {
+                            flashToggle.style.display = "inline-block";
+                            flashToggle.addEventListener("click", () => {
+                                scanner.toggleFlash().then(() => (flashState.textContent = scanner.isFlashOn() ? "on" : "Scan History"));
+                            });
+                        }
+                    });
+                });
+                window.scanner = scanner;
+                document.getElementById("show-scan-region").addEventListener("change", (e) => {
+                    const input = e.target;
+                    const label = input.parentNode;
+                    label.parentNode.insertBefore(scanner.$canvas, label.nextSibling);
+                    scanner.$canvas.style.display = input.checked ? "block" : "none";
+                });
+                document.getElementById("inversion-mode-select").addEventListener("change", (event) => {
+                    scanner.setInversionMode(event.target.value);
+                });
+                document.getElementById("start-button").addEventListener("click", () => {
+                    scanner.start();
+                });
+                document.getElementById("stop-button").addEventListener("click", () => {
+                    scanner.stop();
+                });
+                fileSelector.addEventListener("change", (event) => {
+                    const file = fileSelector.files[0];
+                    if (!file) {
+                        return;
+                    }
+                    appimage.src = URL.createObjectURL(fileSelector.files[0]);
+                    QrScanner.scanImage(file)
+                        .then((result) => setResult(fileQrResult, result))
+                        .catch((e) => setResult(fileQrResult, e || "No QR code found."));
+                });
+				
+				qrcodeclose.onclick = function () {
+                    appopen.style.display = "none";
+                    appimage.style.display = "none";
+                    customscanner.style.display = "block";
+                    document.querySelector(".app__qrcode").classList.add("app__dialog--hide");
+                    document.querySelector(".modal-backdrop").classList.remove("in");
+                    scanner.start();
+                };
+				
+				var qrcodeopenurl = document.querySelector(".app__dialog-open");
+                qrcodeopenurl.onclick = function () {
+                    const app__result = document.getElementById("result");
+                    window.open(app__result.value);
+                };
+            });
+        </script>
+    </body>
+</html>

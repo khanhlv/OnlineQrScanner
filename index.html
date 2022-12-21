@@ -34,17 +34,20 @@
                         <polygon></polygon>
                     </svg>
                 </div>
+				
+				<div class="app__dialog app__qrcode app__dialog--hide">
+					<div class="app__dialog-content">
+						<h5>QR Code</h5>
+						<img src="assets/img/close.svg" class="app__dialog-close" />
+						<input type="text" id="result" />
+					</div>
+					<div class="app__dialog-actions">
+						<button type="button" class="app__dialog-open" id="app__open"><img src="assets/img/url.svg" /><span>Open URL</span></button>
+					</div>
+				</div>
+				<img src="" style="display: none;" id="frame" class="app__overlay" />
             </main>
-			<div class="app__dialog app__qrcode app__dialog--hide">
-				<div class="app__dialog-content">
-					<h5>QR Code</h5>
-					<img src="assets/img/close.svg" class="app__dialog-close" /><input type="text" id="result" />
-					<p>Now you can edit the QR code.</p>
-				</div>
-				<div class="app__dialog-actions">
-					<button type="button" class="app__dialog-open" id="app__open"><img src="assets/img/url.svg" /><span>Open URL</span></button>
-				</div>
-			</div>
+			
         </div>
 		
 		<div class="app__overlay">

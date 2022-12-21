@@ -7,22 +7,25 @@
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="theme-color" content="#ffffff" />
 		
-		<title>Online QR Code Scanner</title>
+		<title>Online QR Code Scanner - Web QR</title>
         <meta name="description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes. High-speed scanning, No need to install, Scan editing." />
-        <meta name="keywords" content="qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code" />
+        <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code" />
         
         <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes." />
-        <meta property="og:title" content="Online QR Code Scanner" />
-        <meta property="og:url" content="https://www.online-qr-scanner.net" />
+        <meta property="og:title" content="Online QR Code Scanner - Web QR" />
+        <meta property="og:url" content="https://online-qr-scanner.net" />
         
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
 		
-        <link rel="canonical" href="https://www.online-qr-scanner.net" />
+        <link rel="canonical" href="https://online-qr-scanner.net" />
         
         <link href="assets/css/styles.css" rel="stylesheet" />
         
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/cookie.js"></script>
+        <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
     </head>
     <body>
         <div class="app__layout">
@@ -40,6 +43,7 @@
 						<h5>QR Code</h5>
 						<img src="assets/img/close.svg" class="app__dialog-close" />
 						<input type="text" id="result" />
+						<button class="btn app__dialog-open" data-clipboard-target="#result" style="display: block; margin: auto;">Copy</button>
 					</div>
 					<div class="app__dialog-actions">
 						<button type="button" class="app__dialog-open" id="app__open"><img src="assets/img/url.svg" /><span>Open URL</span></button>
@@ -47,7 +51,6 @@
 				</div>
 				<img src="" style="display: none;" id="frame" class="app__overlay" />
             </main>
-			
         </div>
 		
 		<div class="app__overlay">
@@ -75,13 +78,18 @@
             <span id="file-qr-result">None</span>
         </div>
         
-        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/cookie.js"></script>
-        <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
+        
         <script type="module">
+			var clipboard = new ClipboardJS('.btn');
+
+			clipboard.on('success', function(e) {
+				e.clearSelection();
+			});
+			
             import QrScanner from "./assets/js/qr-scanner.min.js";
             QrScanner.WORKER_PATH = "./assets/js/qr-scanner-worker.min.js";
             $(document).ready(function () {
+				
                 const video = document.getElementById("qr-video");
                 const videoContainer = document.getElementById("video-container");
                 const camHasCamera = document.getElementById("cam-has-camera");
@@ -128,30 +136,7 @@
                             appopen.style.display = "block";
                         }
                         app__result.value = result;
-                        var history_code = $.cookie("history");
-                        if (history_code == null || history_code == "") {
-                            if ($.trim(result) !== "") {
-                                $.cookie("history", "1", { expires: 7, path: "/" });
-                                $.cookie("history_1", result, { expires: 7, path: "/" });
-                                $(".app_file").html("1");
-                            }
-                        } else {
-                            var history_url;
-                            var myqrcodeall = new Array();
-                            for (let index = 1; index <= Number(history_code); index++) {
-                                history_url = $.cookie("history_" + index);
-                                myqrcodeall.push(history_url);
-                            }
-                            if ($.inArray(result, myqrcodeall)) {
-                                if ($.trim(result) !== "") {
-                                    history_code = Number(history_code) + 1;
-                                    $.cookie("history", history_code, { expires: 7, path: "/" });
-                                    $.cookie("history_" + history_code, result, { expires: 7, path: "/" });
-                                    $(".app_file").html(history_code);
-                                }
-                            }
-                        }
-                        $(".app__qrcode_light").removeClass("noshow");
+                        
                         if (result.length > 0) {
                             app__qrcode.classList.remove("app__dialog--hide");
                             document.querySelector(".modal-backdrop").classList.add("in");
@@ -162,21 +147,7 @@
                     clearTimeout(label.highlightTimeout);
                     label.highlightTimeout = setTimeout(() => (label.style.color = "inherit"), 100);
                 }
-                var history_code = $.cookie("history");
-                if (history_code == null || history_code == "") {
-                } else {
-                    var history_url;
-                    var myqrcodeall = new Array();
-                    for (let index = 1; index <= Number(history_code); index++) {
-                        history_url = $.cookie("history_" + index);
-                        if ($.trim(history_url) !== "") {
-                            myqrcodeall.push(history_url);
-                        }
-                    }
-                    var getarrayall = unique(myqrcodeall);
-                    $(".app_file").html(getarrayall.length);
-                    $(".app__qrcode_light").removeClass("noshow");
-                }
+                
                 QrScanner.hasCamera().then((hasCamera) => (camHasCamera.textContent = hasCamera));
                 const scanner = new QrScanner(
                     video,
@@ -239,7 +210,6 @@
                     const app__result = document.getElementById("result");
                     window.open(app__result.value);
                 };
-                
             });
         </script>
     </body>

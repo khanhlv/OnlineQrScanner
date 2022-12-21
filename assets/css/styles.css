@@ -829,7 +829,7 @@ input[type=file] {
 }
 
 .app__dialog-content::before {
-    background-image: url(../img/qrcode-scanner.svg);
+    /* background-image: url(../img/qrcode-scanner.svg); */
     background-repeat: no-repeat;
     background-size: contain;
     content: '';
@@ -852,7 +852,8 @@ input[type=file] {
     padding: 4px;
     top: 13px;
     cursor: pointer;
-    z-index: 100000
+    z-index: 100000;
+	border: 1px solid rgba(97,66,66,.42);
 }
 
 .app__dialog-content .app__dialog-close:hover {

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="theme-color" content="#ffffff" />
+	
+	<title>Online QR Code Scanner</title>
+	<meta name="description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes. High-speed scanning, No need to install, Scan editing." />
+	<meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code" />
+	
+	<meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes." />
+	<meta property="og:title" content="Online QR Code Scanner" />
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png" />
+	
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+	<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/qrcode.min.js"></script>
+	<script type="text/javascript" src="../assets/js/clipboard.min.js"></script>
+	<script type="text/javascript" src="../assets/js/bootstrap.bundle.min.js"></script>
+	<style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+		.camera-scanner-layout {
+			border: 3px dashed rgba(25,103,210,.5);
+			width: 100%;
+			height: 250px;
+			border-radius: 4px;
+			position: relative;
+			background: rgba(25,103,210,.1);
+		}
+		.camera-scanner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			background-color: #1967d2;
+			cursor: pointer;
+			border: none;
+			border-radius: 20px;
+			padding: 2px 14px;
+			font-size: 16px;
+			line-height: 40px;
+			font-weight: 600;
+			color: #ecf0f1;
+			box-shadow: rgb(78 132 253 / 16%) 0 3px 6px, rgb(78 132 253 / 23%) 0 3px 6px;
+		}
+
+	</style>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="index.html">
+		  <img src="../assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top"> Online QR Scanner
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-link" target="_blank" href="index.html">Home</a>
+			<a class="nav-link" target="_blank" href="about.html">About</a>
+			<a class="nav-link" target="_blank" href="privacy.html">Privacy & Policy</a>
+			<a class="nav-link" target="_blank" href="terms.html">Terms of use</a>
+		  </div>
+		</div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="col-md-12 mt-3">
+			<h1>Online QR Code Scanner</h1> 
+			<p>Scan your QR code online in your Chrome, Safari or Firefox browser.</p>
+		</div>
+		
+		<div class="row col-md-12" style="margin: 0px;">
+			<a href="camera.html" class="col-md-6 camera-scanner-layout">
+				<button type="button" class="camera-scanner">Scan QR Code Camera</button>
+			</a>
+			<div class="col-md-6 camera-scanner-layout" id="openUpload" style="cursor: pointer;">
+				<button type="button" class="camera-scanner" class="btn btn-primary">Scan QR Code Upload File</button>
+			</div>
+		</div>
+	
+		<div class="col-md-12" id="qrCodeUpload" style="margin-top: 30px;display: none;">
+			<div style="border: 3px dashed rgba(25,103,210,.5);padding: 15px;">
+				<input type="file" accept="image/*" id="decode-file" style="display: none;" />
+				<p id="decode-text" class="hide">
+				<textarea class="form-control" rows="5" id="result" readonly></textarea></p>
+				<button type="button" class="btn" data-original-title="Copied!" data-clipboard-target="#result" style="display: block; margin: auto;font-size: 14px;font-weight: 300;outline: none;cursor: pointer;color: #fff;border-radius: 3px;padding: 5px 12px;line-height: 20px;background-color: #21262d;border: 1px solid #30363d;">Copy</button>
+				<br/>
+				<br/>
+				<canvas id="decode-canvas" style="width: 100%"></canvas>
+			</div>
+		</div>
+		
+		<div class="col-md-12" style="margin-top: 30px">
+			<h2>
+				Scan QR Code Online
+			</h2>
+			<p>
+				There is no doubt that technology is seeing significant development in all parts of the world, and there are several industries that have benefitted from its advancement. These days, people notice a square barcode that can be seen on
+				the back of a business card or a light pole. This pixelated code is known as the QR Code. These codes can be seen in magazines, newspapers, flyovers, and posters.
+			</p>
+			<p>
+				It has become relatively easy to spot a QR code around us, and the best thing about it is that it helps us to interact with the world through computers, smartphones, or tablets. Although it is a mid 90's invention, it wasn't able to
+				gain momentum until we saw smartphones in the market. In order to scan your QR Code anytime and anywhere, a QR Code Scanner is a perfect tool allowing you to generate, download, and scan the QR codes from one place.
+			</p>
+			<h3 class="how-to-heading">
+				Introduction to a QR Code:
+			</h3>
+			<p>
+				A QR Code is also known by many as a Quick Response Code which is known to be a two-dimensional version of a Barcode. It is capable of conveying a good variety of information with the help of the scanner on a mobile device quickly. It
+				can score up to 7089 digits, including special characters and punctuation marks. This code is capable of encoding any words and phrases.
+			</p>
+			<p>
+				It is worth mentioning that this QR Code has black squares and dots that come with different hazy patterns. All of these patterns are arranged in a squared grid with a white background. All of the information gets extracted from these
+				patterns. When we talk about the standard Barcodes, these are capable of scanning in one direction and can store a small amount of information. A QR Code is capable of scanning in two directions and can house a lot more data.
+			</p>
+			<h3 class="how-to-heading">
+				Types of QR Code:
+			</h3>
+			<h4>
+				Static QR Code:
+			</h4>
+			<p>
+				This QR Code contains all the information that remains fixed and cannot be edited once generated. A static QR Code is excellent for personal use as well as the QR Code API. It is capable of creating employee IDs, technical product
+				documentation, event badges, and a lot more. As a static QR code has a fixed nature, many people don't find it ideal for marketing campaigns or businesses.
+			</p>
+			<p>
+				A static QR Code is used for Wi-Fi. This particular can also be seen in Bitcoin, as the currency transactions can be smoothed by turning the Bitcoin into a QR Code. As QR Code can display up to 300 characters, so you can offer any
+				message to the customers without accessing the internet. Through the scanning of the vCard code, you can share the email, phone number, and website address with the clients.
+			</p>
+			<h4>
+				Dynamic QR Code:
+			</h4>
+			<p>
+				As compared to the static QR Code, the dynamic QR Code can be updated, edited, and changed as many times as you want. This is the reason why it is excellent for any business or market purpose. When more information is entered into the
+				static QR Code, it gets complex. However, things are different with dynamic QR Codes because the content is not contained in the code, but there is a URL assigned to it.
+			</p>
+			<p>
+				The best thing about the dynamic QR Code is that it is small and can easily be integrated into the packaging design and print material. Another great feature of dynamic QR Codes is that it becomes possible for you to access when, where
+				and through which device the scan took place.
+			</p>
+			<h3 class="how-to-heading">
+				What is an online QR Code Scanner?
+			</h3>
+			<p>
+				A QR Code scanner online is known to be a free online application that is helpful in scanning the QR codes from the mobile phone camera or the image. The best thing about the online scanner is that it can locate and scan several
+				barcodes on any image. There are sites offering a dedicated app, but when you have an online QR code scanner, you can instantly scan the code and save this storage on your phone.
+			</p>
+			<p>
+				The sophisticated algorithm of the QR code scanner helps you to scan even the damaged QR codes. This QR code scanner can support different types of input formats, which include JPEG, GIF, PNG, and BMP. Other than that, the QR code
+				scanner works with all computers and smartphones, whether it is Windows, Android, iOS, or ChromeOS.
+			</p>
+			<h3 class="how-to-heading">
+				Conclusion:
+			</h3>
+			<p class="about-bold">
+				The majority of smartphones come with a QR Code scanner, and those who don't have one can easily download it. Although there are several QR Code scanning apps out there in the market, it is also possible to use a QR Code scanner online
+				Sites like QRCodeScannerOnline.Com offer a free utility to scan any information that is coded in the QR Code. Because of this, the need for QR Codes has skyrocketed in the past few years.
+			</p>
+
+			
+		</div>
+		
+		
+	</div>
+	
+	<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+		<div class="container">
+			<p class="mb-0">© 2022 Online QR Scanner.</p>
+		</div>
+	</footer>
+	
+	<script>
+		var clipboard = new ClipboardJS('.btn');
+
+		clipboard.on('success', function(e) {
+			e.clearSelection();
+		});
+			
+		var hasImage = false;
+		var imageData = null;
+		var decodeText = $("#decode-text");
+		var canvas = $("#decode-canvas")[0];
+		var context = canvas.getContext("2d");
+		var decodeResult = decodeText.find("textarea");
+
+		function resetDecoder() {
+			hasImage = false;
+			imageData = null;
+
+			decodeResult.val("");
+			decodeText.addClass("hide");
+		}
+
+		function drawImage(src) {
+			var img = new Image();
+
+			img.crossOrigin = "anonymous";
+
+			img.onload = function () {
+				var width = img.width;
+				var height = img.height;
+				var actualWidth = Math.min(960, width);
+				var actualHeight = height * (actualWidth / width);
+
+				hasImage = true;
+				canvas.width = actualWidth;
+				canvas.height = actualHeight;
+
+				context.drawImage(img, 0, 0, width, height, 0, 0, actualWidth, actualHeight);
+
+				imageData = context.getImageData(0, 0, actualWidth, actualHeight);
+			};
+
+			img.src = src;
+		}
+
+		$("#decode-file").on("change", function (e) {
+			var file = e.target.files[0];
+
+			if (file) {
+				resetDecoder();
+
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					drawImage(e.target.result);
+					$("#qrCodeUpload").show();
+
+					setTimeout(function () {
+						decodeAction();
+					}, 500);
+				};
+
+				reader.readAsDataURL(file);
+			}
+		});
+
+		function getImageData() {
+			imageData && context.putImageData(imageData, 0, 0);
+
+			return imageData || context.getImageData(0, 0, canvas.width, canvas.height);
+		}
+
+		function getModuleSize(location, version) {
+			var topLeft = location.topLeft;
+			var topRight = location.topRight;
+			var a = Math.abs(topRight.x - topLeft.x);
+			var b = Math.abs(topRight.y - topLeft.y);
+			var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+			return c / (version * 4 + 17);
+		}
+
+		function markFinderPattern(x, y, moduleSize) {
+			context.fillStyle = "#00ff00";
+
+			context.beginPath();
+			context.arc(x, y, moduleSize * 0.75, 0, 2 * Math.PI);
+			context.fill();
+		}
+
+		function markQRCodeArea(location, version) {
+			context.lineWidth = 2;
+			context.strokeStyle = "#00ff00";
+
+			context.beginPath();
+			context.moveTo(location.topLeft.x, location.topLeft.y);
+			context.lineTo(location.topRight.x, location.topRight.y);
+			context.lineTo(location.bottomRight.x, location.bottomRight.y);
+			context.lineTo(location.bottomLeft.x, location.bottomLeft.y);
+			context.lineTo(location.topLeft.x, location.topLeft.y);
+			context.stroke();
+
+			var moduleSize = getModuleSize(location, version);
+
+			markFinderPattern(location.topLeftFinder.x, location.topLeftFinder.y, moduleSize);
+			markFinderPattern(location.topRightFinder.x, location.topRightFinder.y, moduleSize);
+			markFinderPattern(location.bottomLeftFinder.x, location.bottomLeftFinder.y, moduleSize);
+		}
+
+		function decodeAction() {
+			if (!hasImage) {
+				return alert("Please select a QR code picture");
+			}
+
+			var imageData = getImageData();
+			var result = new QRCode.Decoder().setOptions({ canOverwriteImage: false }).decode(imageData.data, imageData.width, imageData.height);
+
+			if (result) {
+				decodeResult.val(result.data);
+				decodeText.removeClass("hide");
+
+				markQRCodeArea(result.location, result.version);
+
+				console && console.log(result);
+			} else {
+				alert("QR code decoding failed");
+			}
+		}
+		
+		$("#openUpload").click(function () {
+			$("#decode-file").click();
+		});
+
+	</script>
+
+</body>
+</html>

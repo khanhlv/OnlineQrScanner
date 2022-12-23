@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="haw">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <title>Helu QR Code Scanner</title> 
+  <meta name="description" content="ʻO QR Code Scanner kahi scanner pūnaewele a me ka wikiwiki a me ka hana ma ka pūnaewele QR code scanner no ka ʻike ʻana i nā code QR. Kiʻekiʻe-wikiwiki scanning, ʻAʻole pono e hoʻouka, Scan hoʻoponopono."> 
+  <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code,pūnaewele qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, pehea e nānā ai i ke code qr, pehea wau e nānā ai i ke code qr, scan i ka qr code, scan app , pehea e ʻimi ai i ke code qr, pehea e nānā ai i ke code qr, google qr code, free qr code scanner, qr code scannen, scan a qr code"> 
+  <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes."> 
+  <meta property="og:title" content="Helu QR Code Scanner"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png"> 
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script> 
+  <style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+		.camera-scanner-layout {
+			border: 3px dashed rgba(25,103,210,.5);
+			width: 100%;
+			height: 250px;
+			border-radius: 4px;
+			position: relative;
+			background: rgba(25,103,210,.1);
+		}
+		.camera-scanner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			background-color: #1967d2;
+			cursor: pointer;
+			border: none;
+			border-radius: 20px;
+			padding: 2px 14px;
+			font-size: 16px;
+			line-height: 40px;
+			font-weight: 600;
+			color: #ecf0f1;
+			box-shadow: rgb(78 132 253 / 16%) 0 3px 6px, rgb(78 132 253 / 23%) 0 3px 6px;
+		}
+
+	</style> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script> 
+  <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script> 
+  <link rel="alternate" hreflang="haw" href="https://online-qr-scanner.net/haw/index.html">
+  <link rel="alternate" hreflang="ar" href="https://online-qr-scanner.net/ar/index.html">
+  <link rel="alternate" hreflang="sq" href="https://online-qr-scanner.net/sq/index.html">
+  <link rel="alternate" hreflang="am" href="https://online-qr-scanner.net/am/index.html">
+  <link rel="alternate" hreflang="en" href="https://online-qr-scanner.net/index.html">
+  <link rel="alternate" hreflang="hy" href="https://online-qr-scanner.net/hy/index.html">
+  <link rel="alternate" hreflang="as" href="https://online-qr-scanner.net/as/index.html">
+  <link rel="alternate" hreflang="ay" href="https://online-qr-scanner.net/ay/index.html">
+  <link rel="alternate" hreflang="az" href="https://online-qr-scanner.net/az/index.html">
+  <link rel="alternate" hreflang="pl" href="https://online-qr-scanner.net/pl/index.html">
+  <link rel="alternate" hreflang="fa" href="https://online-qr-scanner.net/fa/index.html">
+  <link rel="alternate" hreflang="bm" href="https://online-qr-scanner.net/bm/index.html">
+  <link rel="alternate" hreflang="xh" href="https://online-qr-scanner.net/xh/index.html">
+  <link rel="alternate" hreflang="eu" href="https://online-qr-scanner.net/eu/index.html">
+  <link rel="alternate" hreflang="be" href="https://online-qr-scanner.net/be/index.html">
+  <link rel="alternate" hreflang="bn" href="https://online-qr-scanner.net/bn/index.html">
+  <link rel="alternate" hreflang="bho" href="https://online-qr-scanner.net/bho/index.html">
+  <link rel="alternate" hreflang="bs" href="https://online-qr-scanner.net/bs/index.html">
+  <link rel="alternate" hreflang="pt" href="https://online-qr-scanner.net/pt/index.html">
+  <link rel="alternate" hreflang="bg" href="https://online-qr-scanner.net/bg/index.html">
+  <link rel="alternate" hreflang="ca" href="https://online-qr-scanner.net/ca/index.html">
+  <link rel="alternate" hreflang="ceb" href="https://online-qr-scanner.net/ceb/index.html">
+  <link rel="alternate" hreflang="ny" href="https://online-qr-scanner.net/ny/index.html">
+  <link rel="alternate" hreflang="co" href="https://online-qr-scanner.net/co/index.html">
+  <link rel="alternate" hreflang="ht" href="https://online-qr-scanner.net/ht/index.html">
+  <link rel="alternate" hreflang="hr" href="https://online-qr-scanner.net/hr/index.html">
+  <link rel="alternate" hreflang="dv" href="https://online-qr-scanner.net/dv/index.html">
+  <link rel="alternate" hreflang="iw" href="https://online-qr-scanner.net/iw/index.html">
+  <link rel="alternate" hreflang="doi" href="https://online-qr-scanner.net/doi/index.html">
+  <link rel="alternate" hreflang="da" href="https://online-qr-scanner.net/da/index.html">
+  <link rel="alternate" hreflang="de" href="https://online-qr-scanner.net/de/index.html">
+  <link rel="alternate" hreflang="et" href="https://online-qr-scanner.net/et/index.html">
+  <link rel="alternate" hreflang="ee" href="https://online-qr-scanner.net/ee/index.html">
+  <link rel="alternate" hreflang="tl" href="https://online-qr-scanner.net/tl/index.html">
+  <link rel="alternate" hreflang="fy" href="https://online-qr-scanner.net/fy/index.html">
+  <link rel="alternate" hreflang="gd" href="https://online-qr-scanner.net/gd/index.html">
+  <link rel="alternate" hreflang="gl" href="https://online-qr-scanner.net/gl/index.html">
+  <link rel="alternate" hreflang="ka" href="https://online-qr-scanner.net/ka/index.html">
+  <link rel="alternate" hreflang="gn" href="https://online-qr-scanner.net/gn/index.html">
+  <link rel="alternate" hreflang="gu" href="https://online-qr-scanner.net/gu/index.html">
+  <link rel="alternate" hreflang="nl" href="https://online-qr-scanner.net/nl/index.html">
+  <link rel="alternate" hreflang="af" href="https://online-qr-scanner.net/af/index.html">
+  <link rel="alternate" hreflang="ko" href="https://online-qr-scanner.net/ko/index.html">
+  <link rel="alternate" hreflang="ha" href="https://online-qr-scanner.net/ha/index.html">
+  <link rel="alternate" hreflang="hi" href="https://online-qr-scanner.net/hi/index.html">
+  <link rel="alternate" hreflang="hmn" href="https://online-qr-scanner.net/hmn/index.html">
+  <link rel="alternate" hreflang="hu" href="https://online-qr-scanner.net/hu/index.html">
+  <link rel="alternate" hreflang="el" href="https://online-qr-scanner.net/el/index.html">
+  <link rel="alternate" hreflang="is" href="https://online-qr-scanner.net/is/index.html">
+  <link rel="alternate" hreflang="ig" href="https://online-qr-scanner.net/ig/index.html">
+  <link rel="alternate" hreflang="ilo" href="https://online-qr-scanner.net/ilo/index.html">
+  <link rel="alternate" hreflang="id" href="https://online-qr-scanner.net/id/index.html">
+  <link rel="alternate" hreflang="ga" href="https://online-qr-scanner.net/ga/index.html">
+  <link rel="alternate" hreflang="jw" href="https://online-qr-scanner.net/jw/index.html">
+  <link rel="alternate" hreflang="kn" href="https://online-qr-scanner.net/kn/index.html">
+  <link rel="alternate" hreflang="kk" href="https://online-qr-scanner.net/kk/index.html">
+  <link rel="alternate" hreflang="km" href="https://online-qr-scanner.net/km/index.html">
+  <link rel="alternate" hreflang="rw" href="https://online-qr-scanner.net/rw/index.html">
+  <link rel="alternate" hreflang="gom" href="https://online-qr-scanner.net/gom/index.html">
+  <link rel="alternate" hreflang="kri" href="https://online-qr-scanner.net/kri/index.html">
+  <link rel="alternate" hreflang="ku" href="https://online-qr-scanner.net/ku/index.html">
+  <link rel="alternate" hreflang="ckb" href="https://online-qr-scanner.net/ckb/index.html">
+  <link rel="alternate" hreflang="ky" href="https://online-qr-scanner.net/ky/index.html">
+  <link rel="alternate" hreflang="lo" href="https://online-qr-scanner.net/lo/index.html">
+  <link rel="alternate" hreflang="la" href="https://online-qr-scanner.net/la/index.html">
+  <link rel="alternate" hreflang="lv" href="https://online-qr-scanner.net/lv/index.html">
+  <link rel="alternate" hreflang="ln" href="https://online-qr-scanner.net/ln/index.html">
+  <link rel="alternate" hreflang="lt" href="https://online-qr-scanner.net/lt/index.html">
+  <link rel="alternate" hreflang="lg" href="https://online-qr-scanner.net/lg/index.html">
+  <link rel="alternate" hreflang="lb" href="https://online-qr-scanner.net/lb/index.html">
+  <link rel="alternate" hreflang="ms" href="https://online-qr-scanner.net/ms/index.html">
+  <link rel="alternate" hreflang="mk" href="https://online-qr-scanner.net/mk/index.html">
+  <link rel="alternate" hreflang="mai" href="https://online-qr-scanner.net/mai/index.html">
+  <link rel="alternate" hreflang="mg" href="https://online-qr-scanner.net/mg/index.html">
+  <link rel="alternate" hreflang="ml" href="https://online-qr-scanner.net/ml/index.html">
+  <link rel="alternate" hreflang="mt" href="https://online-qr-scanner.net/mt/index.html">
+  <link rel="alternate" hreflang="mi" href="https://online-qr-scanner.net/mi/index.html">
+  <link rel="alternate" hreflang="mr" href="https://online-qr-scanner.net/mr/index.html">
+  <link rel="alternate" hreflang="mni-Mtei" href="https://online-qr-scanner.net/mni-Mtei/index.html">
+  <link rel="alternate" hreflang="lus" href="https://online-qr-scanner.net/lus/index.html">
+  <link rel="alternate" hreflang="mn" href="https://online-qr-scanner.net/mn/index.html">
+  <link rel="alternate" hreflang="my" href="https://online-qr-scanner.net/my/index.html">
+  <link rel="alternate" hreflang="no" href="https://online-qr-scanner.net/no/index.html">
+  <link rel="alternate" hreflang="ne" href="https://online-qr-scanner.net/ne/index.html">
+  <link rel="alternate" hreflang="ru" href="https://online-qr-scanner.net/ru/index.html">
+  <link rel="alternate" hreflang="ja" href="https://online-qr-scanner.net/ja/index.html">
+  <link rel="alternate" hreflang="or" href="https://online-qr-scanner.net/or/index.html">
+  <link rel="alternate" hreflang="om" href="https://online-qr-scanner.net/om/index.html">
+  <link rel="alternate" hreflang="ps" href="https://online-qr-scanner.net/ps/index.html">
+  <link rel="alternate" hreflang="sa" href="https://online-qr-scanner.net/sa/index.html">
+  <link rel="alternate" hreflang="fr" href="https://online-qr-scanner.net/fr/index.html">
+  <link rel="alternate" hreflang="fi" href="https://online-qr-scanner.net/fi/index.html">
+  <link rel="alternate" hreflang="pa" href="https://online-qr-scanner.net/pa/index.html">
+  <link rel="alternate" hreflang="qu" href="https://online-qr-scanner.net/qu/index.html">
+  <link rel="alternate" hreflang="eo" href="https://online-qr-scanner.net/eo/index.html">
+  <link rel="alternate" hreflang="ro" href="https://online-qr-scanner.net/ro/index.html">
+  <link rel="alternate" hreflang="sm" href="https://online-qr-scanner.net/sm/index.html">
+  <link rel="alternate" hreflang="cs" href="https://online-qr-scanner.net/cs/index.html">
+  <link rel="alternate" hreflang="nso" href="https://online-qr-scanner.net/nso/index.html">
+  <link rel="alternate" hreflang="sr" href="https://online-qr-scanner.net/sr/index.html">
+  <link rel="alternate" hreflang="st" href="https://online-qr-scanner.net/st/index.html">
+  <link rel="alternate" hreflang="sn" href="https://online-qr-scanner.net/sn/index.html">
+  <link rel="alternate" hreflang="sd" href="https://online-qr-scanner.net/sd/index.html">
+  <link rel="alternate" hreflang="si" href="https://online-qr-scanner.net/si/index.html">
+  <link rel="alternate" hreflang="sk" href="https://online-qr-scanner.net/sk/index.html">
+  <link rel="alternate" hreflang="sl" href="https://online-qr-scanner.net/sl/index.html">
+  <link rel="alternate" hreflang="so" href="https://online-qr-scanner.net/so/index.html">
+  <link rel="alternate" hreflang="su" href="https://online-qr-scanner.net/su/index.html">
+  <link rel="alternate" hreflang="sw" href="https://online-qr-scanner.net/sw/index.html">
+  <link rel="alternate" hreflang="tg" href="https://online-qr-scanner.net/tg/index.html">
+  <link rel="alternate" hreflang="ta" href="https://online-qr-scanner.net/ta/index.html">
+  <link rel="alternate" hreflang="tt" href="https://online-qr-scanner.net/tt/index.html">
+  <link rel="alternate" hreflang="es" href="https://online-qr-scanner.net/es/index.html">
+  <link rel="alternate" hreflang="te" href="https://online-qr-scanner.net/te/index.html">
+  <link rel="alternate" hreflang="th" href="https://online-qr-scanner.net/th/index.html">
+  <link rel="alternate" hreflang="tr" href="https://online-qr-scanner.net/tr/index.html">
+  <link rel="alternate" hreflang="sv" href="https://online-qr-scanner.net/sv/index.html">
+  <link rel="alternate" hreflang="ti" href="https://online-qr-scanner.net/ti/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-qr-scanner.net/zh-CN/index.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-qr-scanner.net/zh-TW/index.html">
+  <link rel="alternate" hreflang="ts" href="https://online-qr-scanner.net/ts/index.html">
+  <link rel="alternate" hreflang="tk" href="https://online-qr-scanner.net/tk/index.html">
+  <link rel="alternate" hreflang="ak" href="https://online-qr-scanner.net/ak/index.html">
+  <link rel="alternate" hreflang="uk" href="https://online-qr-scanner.net/uk/index.html">
+  <link rel="alternate" hreflang="ur" href="https://online-qr-scanner.net/ur/index.html">
+  <link rel="alternate" hreflang="ug" href="https://online-qr-scanner.net/ug/index.html">
+  <link rel="alternate" hreflang="uz" href="https://online-qr-scanner.net/uz/index.html">
+  <link rel="alternate" hreflang="vi" href="https://online-qr-scanner.net/vi/index.html">
+  <link rel="alternate" hreflang="cy" href="https://online-qr-scanner.net/cy/index.html">
+  <link rel="alternate" hreflang="it" href="https://online-qr-scanner.net/it/index.html">
+  <link rel="alternate" hreflang="yi" href="https://online-qr-scanner.net/yi/index.html">
+  <link rel="alternate" hreflang="yo" href="https://online-qr-scanner.net/yo/index.html">
+  <link rel="alternate" hreflang="zu" href="https://online-qr-scanner.net/zu/index.html">
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="index.html"> <img src="/assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top">Kākoʻo QR pūnaewele</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+     <div class="navbar-nav"> 
+      <a class="nav-link" href="index.html">Home</a> 
+      <a class="nav-link" href="about.html">E pili ana</a> 
+      <a class="nav-link" href="privacy.html">Palekana &amp; Kulekele</a> 
+      <a class="nav-link" href="terms.html">Nā ʻōlelo hoʻohana</a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <div class="col-md-12 mt-3"> 
+    <h1>Helu QR Code Scanner</h1> 
+    <p>E nānā i kāu QR code ma ka pūnaewele ma kāu Chrome, Safari a i ʻole Firefox.</p> 
+   </div> 
+   <div class="row col-md-12" style="margin: 0px;"> 
+    <a href="camera.html" class="col-md-6 camera-scanner-layout"> <button type="button" class="camera-scanner">Kiʻi kiʻi kiʻi kiʻi QR Code</button> </a> 
+    <div class="col-md-6 camera-scanner-layout" id="openUpload" style="cursor: pointer;"> 
+     <button type="button" class="btn btn-primary">E kiʻi i ka QR Code Upload File</button> 
+    </div> 
+   </div> 
+   <div class="col-md-12" id="qrCodeUpload" style="margin-top: 30px;display: none;"> 
+    <div style="border: 3px dashed rgba(25,103,210,.5);padding: 15px;"> 
+     <input type="file" accept="image/*" id="decode-file" style="display: none;"> 
+     <p id="decode-text" class="hide"> <textarea class="form-control" rows="5" id="result" readonly></textarea></p> 
+     <button type="button" class="btn" data-original-title="Copied!" data-clipboard-target="#result" style="display: block; margin: auto;font-size: 14px;font-weight: 300;outline: none;cursor: pointer;color: #fff;border-radius: 3px;padding: 5px 12px;line-height: 20px;background-color: #21262d;border: 1px solid #30363d;">kope</button> 
+     <br> 
+     <br> 
+     <canvas id="decode-canvas" style="width: 100%"></canvas> 
+    </div> 
+   </div> 
+   <div class="col-md-12" style="margin-top: 30px"> 
+    <h2>E kiʻi i ke code QR ma ka pūnaewele</h2> 
+    <p>ʻAʻohe mea kānalua ke ʻike nei ka ʻenehana i ka ulu nui ʻana ma nā wahi āpau o ka honua, a he nui nā ʻoihana i pōmaikaʻi mai kona holomua ʻana. I kēia mau lā, ʻike ka poʻe i kahi barcode square i hiki ke ʻike ʻia ma ke kua o ke kāleka ʻoihana a i ʻole ka pou kukui. Ua kapa ʻia kēia code pixelated ʻo ka QR Code. Hiki ke ʻike ʻia kēia mau code ma nā nūpepa, nā nūpepa, nā lele lele, a me nā pepa.</p> 
+    <p>Ua maʻalahi ka ʻike ʻana i kahi QR code a puni mākou, a ʻo ka mea maikaʻi loa o ia mea ʻo ia ke kōkua iā mākou e launa pū me ka honua ma o nā kamepiula, kelepona, a i ʻole nā papa. ʻOiai ʻo ia ka mea i hana ʻia ma waena o 90, ʻaʻole hiki ke loaʻa ka manawa a hiki i ka ʻike ʻana i nā kelepona i ka mākeke. I mea e ʻimi ai i kāu QR Code i kēlā me kēia manawa a me nā wahi āpau, ʻo kahi QR Code Scanner kahi mea hana kūpono e hiki ai iā ʻoe ke hana, hoʻoiho, a nānā i nā code QR mai kahi hoʻokahi.</p> 
+    <h3 class="how-to-heading">Hoʻolauna i kahi QR Code:</h3> 
+    <p>Ua ʻike ʻia ka QR Code e ka lehulehu ma ke ʻano he Quick Response Code i ʻike ʻia he mana ʻelua-dimensional o kahi Barcode. Hiki iā ia ke lawe i nā ʻike like ʻole me ke kōkua o ka scanner ma kahi kelepona paʻa wikiwiki. Hiki iā ia ke helu i nā huahelu 7089, me nā huaʻōlelo kūikawā a me nā kaha kaha. Hiki i kēia code ke hoʻopili i nā huaʻōlelo a me nā ʻōlelo.</p> 
+    <p>Pono e ʻōlelo ʻia he mau ʻāpana ʻeleʻele kēia QR Code a me nā kiko i hele mai me nā ʻano hazy like ʻole. Hoʻonohonoho ʻia kēia mau hiʻohiʻona a pau i kahi pākuʻi huinahā me kahi kāʻei keʻokeʻo. Lawe ʻia nā ʻike a pau mai kēia mau hiʻohiʻona. Ke kamaʻilio nei mākou e pili ana i nā Barcode maʻamau, hiki iā lākou ke nānā i ka ʻaoʻao hoʻokahi a hiki ke mālama i kahi ʻike liʻiliʻi. Hiki i kahi QR Code ke nānā i nā ʻaoʻao ʻelua a hiki ke hoʻopaʻa i nā ʻikepili hou aʻe.</p> 
+    <h3 class="how-to-heading">Nā ʻano o ka QR Code:</h3> 
+    <h4>Helu QR kūʻokoʻa:</h4> 
+    <p>Aia kēia QR Code i nā ʻike āpau i paʻa a ʻaʻole hiki ke hoʻoponopono ʻia i ka wā i hana ʻia. He mea maikaʻi loa ka QR Code no ka hoʻohana pilikino a me ka QR Code API. Hiki iā ia ke hana i nā ID limahana, nā palapala huahana ʻenehana, nā hōʻailona hanana, a me nā mea hou aku. Ma muli o ke ʻano paʻa o ka QR code, nui ka poʻe i ʻike ʻole he kūpono ia no nā hoʻolaha kūʻai aku a ʻoihana paha.</p> 
+    <p>Hoʻohana ʻia kahi code QR static no Wi-Fi. Hiki ke ʻike ʻia kēia kikoʻī ma Bitcoin, no ka mea hiki ke hoʻomaʻamaʻa ʻia nā hana kālā ma ka hoʻohuli ʻana i ka Bitcoin i QR Code. E like me ka QR Code hiki ke hōʻike a hiki i 300 mau huaʻōlelo, no laila hiki iā ʻoe ke hāʻawi i kekahi leka i nā mea kūʻai aku me ka ʻole e komo i ka pūnaewele. Ma o ka nānā ʻana i ke code vCard, hiki iā ʻoe ke kaʻana i ka leka uila, helu kelepona, a me ka helu wahi pūnaewele me nā mea kūʻai aku.</p> 
+    <h4>Helu QR hōʻeuʻeu:</h4> 
+    <p>Ke hoʻohālikelike ʻia me ka QR Code static, hiki ke hoʻonui, hoʻoponopono, a hoʻololi i ka QR Code i nā manawa a pau āu e makemake ai. ʻO ia ke kumu maikaʻi loa no kēlā me kēia ʻoihana a i ʻole ke kumu kūʻai. Ke hoʻokomo ʻia ka ʻike hou aku i loko o ka QR Code static, lilo ia i mea paʻakikī. Eia nō naʻe, ʻokoʻa nā mea me nā QR Codes no ka mea ʻaʻole i loaʻa ka ʻike ma ke code, akā aia kahi URL i hāʻawi ʻia iā ia.</p> 
+    <p>ʻO ka mea maikaʻi loa e pili ana i ka QR Code dynamic ʻo ia ka liʻiliʻi a hiki ke hoʻohui maʻalahi i ka hoʻolālā paʻi a me nā mea paʻi. ʻO kekahi hiʻohiʻona maikaʻi o nā QR Codes e hiki ai iā ʻoe ke komo i ka manawa, kahi a me ka mea i hana ʻia ai ka scan.</p> 
+    <h3 class="how-to-heading">He aha ka QR Code Scanner pūnaewele?</h3> 
+    <p>Ua ʻike ʻia ka QR Code scanner ma ka pūnaewele he palapala noi pūnaewele manuahi e kōkua i ka nānā ʻana i nā code QR mai ke kāʻei kelepona kelepona a i ʻole ke kiʻi. ʻO ka mea maikaʻi loa e pili ana i ka scanner pūnaewele ʻo ia ka hiki ke ʻimi a nānā i kekahi mau barcode ma kekahi kiʻi. Aia nā pūnaewele e hāʻawi ana i kahi polokalamu hoʻolaʻa, akā inā loaʻa iā ʻoe kahi scanner QR code pūnaewele, hiki iā ʻoe ke nānā koke i ke code a mālama i kēia waihona ma kāu kelepona.</p> 
+    <p>ʻO ka algorithm maʻalahi o ka QR code scanner e kōkua iā ʻoe e nānā i nā code QR i hōʻino ʻia. Hiki i kēia QR code scanner ke kākoʻo i nā ʻano palapala hoʻokomo like ʻole, me JPEG, GIF, PNG, a me BMP. Ma waho aʻe o kēlā, hana ka QR code scanner me nā kamepiula āpau a me nā smartphones, inā ʻo Windows, Android, iOS, a i ʻole ChromeOS.</p> 
+    <h3 class="how-to-heading">Ka hopena:</h3> 
+    <p class="about-bold">ʻO ka hapa nui o nā kelepona hele mai me ka QR Code scanner, a ʻo ka poʻe ʻaʻohe mea hiki ke hoʻoiho maʻalahi iā ia. ʻOiai aia kekahi mau QR Code scanning apps ma waho o ka mākeke, hiki nō ke hoʻohana i kahi QR Code scanner online Sites like QRCodeScannerOnline.Com hāʻawi i kahi pono manuahi e nānā i nā ʻike i hoʻopaʻa ʻia ma ka QR Code. Ma muli o kēia, ua piʻi nui ka pono o nā QR Codes i nā makahiki i hala.</p> 
+   </div> 
+  </div> 
+  <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start"> 
+   <div class="container"> 
+    <p class="mb-0" not-translate>© 2022 Online QR Scanner.</p> 
+   </div> 
+  </footer> 
+  <script>
+		var clipboard = new ClipboardJS('.btn');
+
+		clipboard.on('success', function(e) {
+			e.clearSelection();
+		});
+			
+		var hasImage = false;
+		var imageData = null;
+		var decodeText = $("#decode-text");
+		var canvas = $("#decode-canvas")[0];
+		var context = canvas.getContext("2d");
+		var decodeResult = decodeText.find("textarea");
+
+		function resetDecoder() {
+			hasImage = false;
+			imageData = null;
+
+			decodeResult.val("");
+			decodeText.addClass("hide");
+		}
+
+		function drawImage(src) {
+			var img = new Image();
+
+			img.crossOrigin = "anonymous";
+
+			img.onload = function () {
+				var width = img.width;
+				var height = img.height;
+				var actualWidth = Math.min(960, width);
+				var actualHeight = height * (actualWidth / width);
+
+				hasImage = true;
+				canvas.width = actualWidth;
+				canvas.height = actualHeight;
+
+				context.drawImage(img, 0, 0, width, height, 0, 0, actualWidth, actualHeight);
+
+				imageData = context.getImageData(0, 0, actualWidth, actualHeight);
+			};
+
+			img.src = src;
+		}
+
+		$("#decode-file").on("change", function (e) {
+			var file = e.target.files[0];
+
+			if (file) {
+				resetDecoder();
+
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					drawImage(e.target.result);
+					$("#qrCodeUpload").show();
+
+					setTimeout(function () {
+						decodeAction();
+					}, 500);
+				};
+
+				reader.readAsDataURL(file);
+			}
+		});
+
+		function getImageData() {
+			imageData && context.putImageData(imageData, 0, 0);
+
+			return imageData || context.getImageData(0, 0, canvas.width, canvas.height);
+		}
+
+		function getModuleSize(location, version) {
+			var topLeft = location.topLeft;
+			var topRight = location.topRight;
+			var a = Math.abs(topRight.x - topLeft.x);
+			var b = Math.abs(topRight.y - topLeft.y);
+			var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+			return c / (version * 4 + 17);
+		}
+
+		function markFinderPattern(x, y, moduleSize) {
+			context.fillStyle = "#00ff00";
+
+			context.beginPath();
+			context.arc(x, y, moduleSize * 0.75, 0, 2 * Math.PI);
+			context.fill();
+		}
+
+		function markQRCodeArea(location, version) {
+			context.lineWidth = 2;
+			context.strokeStyle = "#00ff00";
+
+			context.beginPath();
+			context.moveTo(location.topLeft.x, location.topLeft.y);
+			context.lineTo(location.topRight.x, location.topRight.y);
+			context.lineTo(location.bottomRight.x, location.bottomRight.y);
+			context.lineTo(location.bottomLeft.x, location.bottomLeft.y);
+			context.lineTo(location.topLeft.x, location.topLeft.y);
+			context.stroke();
+
+			var moduleSize = getModuleSize(location, version);
+
+			markFinderPattern(location.topLeftFinder.x, location.topLeftFinder.y, moduleSize);
+			markFinderPattern(location.topRightFinder.x, location.topRightFinder.y, moduleSize);
+			markFinderPattern(location.bottomLeftFinder.x, location.bottomLeftFinder.y, moduleSize);
+		}
+
+		function decodeAction() {
+			if (!hasImage) {
+				return alert("Please select a QR code picture");
+			}
+
+			var imageData = getImageData();
+			var result = new QRCode.Decoder().setOptions({ canOverwriteImage: false }).decode(imageData.data, imageData.width, imageData.height);
+
+			if (result) {
+				decodeResult.val(result.data);
+				decodeText.removeClass("hide");
+
+				markQRCodeArea(result.location, result.version);
+
+				console && console.log(result);
+			} else {
+				alert("QR code decoding failed");
+			}
+		}
+		
+		$("#openUpload").click(function () {
+			$("#decode-file").click();
+		});
+
+	</script>   
+ </body>
+</html>

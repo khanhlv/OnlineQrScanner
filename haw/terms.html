@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="haw">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <title>Nā ʻōlelo o ka hoʻohana ʻana - QR Code Scanner</title> 
+  <meta name="description" content="ʻO QR Code Scanner kahi scanner pūnaewele a me ka wikiwiki a me ka hana ma ka pūnaewele QR code scanner no ka ʻike ʻana i nā code QR. Kiʻekiʻe-wikiwiki scanning, ʻAʻole pono e hoʻouka, Scan hoʻoponopono."> 
+  <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code,pūnaewele qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do I scan qr code, scan the qr code, scan app , pehea e ʻimi ai i ke code qr, pehea e nānā ai i ke code qr, google qr code, free qr code scanner, qr code scannen, scan a qr code"> 
+  <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes."> 
+  <meta property="og:title" content="Nā ʻōlelo o ka hoʻohana ʻana - QR Code Scanner"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png"> 
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script> 
+  <style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+	</style> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script> 
+  <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script> 
+  <link rel="alternate" hreflang="haw" href="https://online-qr-scanner.net/haw/terms.html">
+  <link rel="alternate" hreflang="ar" href="https://online-qr-scanner.net/ar/terms.html">
+  <link rel="alternate" hreflang="sq" href="https://online-qr-scanner.net/sq/terms.html">
+  <link rel="alternate" hreflang="am" href="https://online-qr-scanner.net/am/terms.html">
+  <link rel="alternate" hreflang="en" href="https://online-qr-scanner.net/terms.html">
+  <link rel="alternate" hreflang="hy" href="https://online-qr-scanner.net/hy/terms.html">
+  <link rel="alternate" hreflang="as" href="https://online-qr-scanner.net/as/terms.html">
+  <link rel="alternate" hreflang="ay" href="https://online-qr-scanner.net/ay/terms.html">
+  <link rel="alternate" hreflang="az" href="https://online-qr-scanner.net/az/terms.html">
+  <link rel="alternate" hreflang="pl" href="https://online-qr-scanner.net/pl/terms.html">
+  <link rel="alternate" hreflang="fa" href="https://online-qr-scanner.net/fa/terms.html">
+  <link rel="alternate" hreflang="bm" href="https://online-qr-scanner.net/bm/terms.html">
+  <link rel="alternate" hreflang="xh" href="https://online-qr-scanner.net/xh/terms.html">
+  <link rel="alternate" hreflang="eu" href="https://online-qr-scanner.net/eu/terms.html">
+  <link rel="alternate" hreflang="be" href="https://online-qr-scanner.net/be/terms.html">
+  <link rel="alternate" hreflang="bn" href="https://online-qr-scanner.net/bn/terms.html">
+  <link rel="alternate" hreflang="bho" href="https://online-qr-scanner.net/bho/terms.html">
+  <link rel="alternate" hreflang="bs" href="https://online-qr-scanner.net/bs/terms.html">
+  <link rel="alternate" hreflang="pt" href="https://online-qr-scanner.net/pt/terms.html">
+  <link rel="alternate" hreflang="bg" href="https://online-qr-scanner.net/bg/terms.html">
+  <link rel="alternate" hreflang="ca" href="https://online-qr-scanner.net/ca/terms.html">
+  <link rel="alternate" hreflang="ceb" href="https://online-qr-scanner.net/ceb/terms.html">
+  <link rel="alternate" hreflang="ny" href="https://online-qr-scanner.net/ny/terms.html">
+  <link rel="alternate" hreflang="co" href="https://online-qr-scanner.net/co/terms.html">
+  <link rel="alternate" hreflang="ht" href="https://online-qr-scanner.net/ht/terms.html">
+  <link rel="alternate" hreflang="hr" href="https://online-qr-scanner.net/hr/terms.html">
+  <link rel="alternate" hreflang="dv" href="https://online-qr-scanner.net/dv/terms.html">
+  <link rel="alternate" hreflang="iw" href="https://online-qr-scanner.net/iw/terms.html">
+  <link rel="alternate" hreflang="doi" href="https://online-qr-scanner.net/doi/terms.html">
+  <link rel="alternate" hreflang="da" href="https://online-qr-scanner.net/da/terms.html">
+  <link rel="alternate" hreflang="de" href="https://online-qr-scanner.net/de/terms.html">
+  <link rel="alternate" hreflang="et" href="https://online-qr-scanner.net/et/terms.html">
+  <link rel="alternate" hreflang="ee" href="https://online-qr-scanner.net/ee/terms.html">
+  <link rel="alternate" hreflang="tl" href="https://online-qr-scanner.net/tl/terms.html">
+  <link rel="alternate" hreflang="fy" href="https://online-qr-scanner.net/fy/terms.html">
+  <link rel="alternate" hreflang="gd" href="https://online-qr-scanner.net/gd/terms.html">
+  <link rel="alternate" hreflang="gl" href="https://online-qr-scanner.net/gl/terms.html">
+  <link rel="alternate" hreflang="ka" href="https://online-qr-scanner.net/ka/terms.html">
+  <link rel="alternate" hreflang="gn" href="https://online-qr-scanner.net/gn/terms.html">
+  <link rel="alternate" hreflang="gu" href="https://online-qr-scanner.net/gu/terms.html">
+  <link rel="alternate" hreflang="nl" href="https://online-qr-scanner.net/nl/terms.html">
+  <link rel="alternate" hreflang="af" href="https://online-qr-scanner.net/af/terms.html">
+  <link rel="alternate" hreflang="ko" href="https://online-qr-scanner.net/ko/terms.html">
+  <link rel="alternate" hreflang="ha" href="https://online-qr-scanner.net/ha/terms.html">
+  <link rel="alternate" hreflang="hi" href="https://online-qr-scanner.net/hi/terms.html">
+  <link rel="alternate" hreflang="hmn" href="https://online-qr-scanner.net/hmn/terms.html">
+  <link rel="alternate" hreflang="hu" href="https://online-qr-scanner.net/hu/terms.html">
+  <link rel="alternate" hreflang="el" href="https://online-qr-scanner.net/el/terms.html">
+  <link rel="alternate" hreflang="is" href="https://online-qr-scanner.net/is/terms.html">
+  <link rel="alternate" hreflang="ig" href="https://online-qr-scanner.net/ig/terms.html">
+  <link rel="alternate" hreflang="ilo" href="https://online-qr-scanner.net/ilo/terms.html">
+  <link rel="alternate" hreflang="id" href="https://online-qr-scanner.net/id/terms.html">
+  <link rel="alternate" hreflang="ga" href="https://online-qr-scanner.net/ga/terms.html">
+  <link rel="alternate" hreflang="jw" href="https://online-qr-scanner.net/jw/terms.html">
+  <link rel="alternate" hreflang="kn" href="https://online-qr-scanner.net/kn/terms.html">
+  <link rel="alternate" hreflang="kk" href="https://online-qr-scanner.net/kk/terms.html">
+  <link rel="alternate" hreflang="km" href="https://online-qr-scanner.net/km/terms.html">
+  <link rel="alternate" hreflang="rw" href="https://online-qr-scanner.net/rw/terms.html">
+  <link rel="alternate" hreflang="gom" href="https://online-qr-scanner.net/gom/terms.html">
+  <link rel="alternate" hreflang="kri" href="https://online-qr-scanner.net/kri/terms.html">
+  <link rel="alternate" hreflang="ku" href="https://online-qr-scanner.net/ku/terms.html">
+  <link rel="alternate" hreflang="ckb" href="https://online-qr-scanner.net/ckb/terms.html">
+  <link rel="alternate" hreflang="ky" href="https://online-qr-scanner.net/ky/terms.html">
+  <link rel="alternate" hreflang="lo" href="https://online-qr-scanner.net/lo/terms.html">
+  <link rel="alternate" hreflang="la" href="https://online-qr-scanner.net/la/terms.html">
+  <link rel="alternate" hreflang="lv" href="https://online-qr-scanner.net/lv/terms.html">
+  <link rel="alternate" hreflang="ln" href="https://online-qr-scanner.net/ln/terms.html">
+  <link rel="alternate" hreflang="lt" href="https://online-qr-scanner.net/lt/terms.html">
+  <link rel="alternate" hreflang="lg" href="https://online-qr-scanner.net/lg/terms.html">
+  <link rel="alternate" hreflang="lb" href="https://online-qr-scanner.net/lb/terms.html">
+  <link rel="alternate" hreflang="ms" href="https://online-qr-scanner.net/ms/terms.html">
+  <link rel="alternate" hreflang="mk" href="https://online-qr-scanner.net/mk/terms.html">
+  <link rel="alternate" hreflang="mai" href="https://online-qr-scanner.net/mai/terms.html">
+  <link rel="alternate" hreflang="mg" href="https://online-qr-scanner.net/mg/terms.html">
+  <link rel="alternate" hreflang="ml" href="https://online-qr-scanner.net/ml/terms.html">
+  <link rel="alternate" hreflang="mt" href="https://online-qr-scanner.net/mt/terms.html">
+  <link rel="alternate" hreflang="mi" href="https://online-qr-scanner.net/mi/terms.html">
+  <link rel="alternate" hreflang="mr" href="https://online-qr-scanner.net/mr/terms.html">
+  <link rel="alternate" hreflang="mni-Mtei" href="https://online-qr-scanner.net/mni-Mtei/terms.html">
+  <link rel="alternate" hreflang="lus" href="https://online-qr-scanner.net/lus/terms.html">
+  <link rel="alternate" hreflang="mn" href="https://online-qr-scanner.net/mn/terms.html">
+  <link rel="alternate" hreflang="my" href="https://online-qr-scanner.net/my/terms.html">
+  <link rel="alternate" hreflang="no" href="https://online-qr-scanner.net/no/terms.html">
+  <link rel="alternate" hreflang="ne" href="https://online-qr-scanner.net/ne/terms.html">
+  <link rel="alternate" hreflang="ru" href="https://online-qr-scanner.net/ru/terms.html">
+  <link rel="alternate" hreflang="ja" href="https://online-qr-scanner.net/ja/terms.html">
+  <link rel="alternate" hreflang="or" href="https://online-qr-scanner.net/or/terms.html">
+  <link rel="alternate" hreflang="om" href="https://online-qr-scanner.net/om/terms.html">
+  <link rel="alternate" hreflang="ps" href="https://online-qr-scanner.net/ps/terms.html">
+  <link rel="alternate" hreflang="sa" href="https://online-qr-scanner.net/sa/terms.html">
+  <link rel="alternate" hreflang="fr" href="https://online-qr-scanner.net/fr/terms.html">
+  <link rel="alternate" hreflang="fi" href="https://online-qr-scanner.net/fi/terms.html">
+  <link rel="alternate" hreflang="pa" href="https://online-qr-scanner.net/pa/terms.html">
+  <link rel="alternate" hreflang="qu" href="https://online-qr-scanner.net/qu/terms.html">
+  <link rel="alternate" hreflang="eo" href="https://online-qr-scanner.net/eo/terms.html">
+  <link rel="alternate" hreflang="ro" href="https://online-qr-scanner.net/ro/terms.html">
+  <link rel="alternate" hreflang="sm" href="https://online-qr-scanner.net/sm/terms.html">
+  <link rel="alternate" hreflang="cs" href="https://online-qr-scanner.net/cs/terms.html">
+  <link rel="alternate" hreflang="nso" href="https://online-qr-scanner.net/nso/terms.html">
+  <link rel="alternate" hreflang="sr" href="https://online-qr-scanner.net/sr/terms.html">
+  <link rel="alternate" hreflang="st" href="https://online-qr-scanner.net/st/terms.html">
+  <link rel="alternate" hreflang="sn" href="https://online-qr-scanner.net/sn/terms.html">
+  <link rel="alternate" hreflang="sd" href="https://online-qr-scanner.net/sd/terms.html">
+  <link rel="alternate" hreflang="si" href="https://online-qr-scanner.net/si/terms.html">
+  <link rel="alternate" hreflang="sk" href="https://online-qr-scanner.net/sk/terms.html">
+  <link rel="alternate" hreflang="sl" href="https://online-qr-scanner.net/sl/terms.html">
+  <link rel="alternate" hreflang="so" href="https://online-qr-scanner.net/so/terms.html">
+  <link rel="alternate" hreflang="su" href="https://online-qr-scanner.net/su/terms.html">
+  <link rel="alternate" hreflang="sw" href="https://online-qr-scanner.net/sw/terms.html">
+  <link rel="alternate" hreflang="tg" href="https://online-qr-scanner.net/tg/terms.html">
+  <link rel="alternate" hreflang="ta" href="https://online-qr-scanner.net/ta/terms.html">
+  <link rel="alternate" hreflang="tt" href="https://online-qr-scanner.net/tt/terms.html">
+  <link rel="alternate" hreflang="es" href="https://online-qr-scanner.net/es/terms.html">
+  <link rel="alternate" hreflang="te" href="https://online-qr-scanner.net/te/terms.html">
+  <link rel="alternate" hreflang="th" href="https://online-qr-scanner.net/th/terms.html">
+  <link rel="alternate" hreflang="tr" href="https://online-qr-scanner.net/tr/terms.html">
+  <link rel="alternate" hreflang="sv" href="https://online-qr-scanner.net/sv/terms.html">
+  <link rel="alternate" hreflang="ti" href="https://online-qr-scanner.net/ti/terms.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-qr-scanner.net/zh-CN/terms.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-qr-scanner.net/zh-TW/terms.html">
+  <link rel="alternate" hreflang="ts" href="https://online-qr-scanner.net/ts/terms.html">
+  <link rel="alternate" hreflang="tk" href="https://online-qr-scanner.net/tk/terms.html">
+  <link rel="alternate" hreflang="ak" href="https://online-qr-scanner.net/ak/terms.html">
+  <link rel="alternate" hreflang="uk" href="https://online-qr-scanner.net/uk/terms.html">
+  <link rel="alternate" hreflang="ur" href="https://online-qr-scanner.net/ur/terms.html">
+  <link rel="alternate" hreflang="ug" href="https://online-qr-scanner.net/ug/terms.html">
+  <link rel="alternate" hreflang="uz" href="https://online-qr-scanner.net/uz/terms.html">
+  <link rel="alternate" hreflang="vi" href="https://online-qr-scanner.net/vi/terms.html">
+  <link rel="alternate" hreflang="cy" href="https://online-qr-scanner.net/cy/terms.html">
+  <link rel="alternate" hreflang="it" href="https://online-qr-scanner.net/it/terms.html">
+  <link rel="alternate" hreflang="yi" href="https://online-qr-scanner.net/yi/terms.html">
+  <link rel="alternate" hreflang="yo" href="https://online-qr-scanner.net/yo/terms.html">
+  <link rel="alternate" hreflang="zu" href="https://online-qr-scanner.net/zu/terms.html">
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="index.html"> <img src="/assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top">Kākoʻo QR pūnaewele</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+     <div class="navbar-nav"> 
+      <a class="nav-link" href="index.html">Home</a> 
+      <a class="nav-link" href="about.html">E pili ana</a> 
+      <a class="nav-link" href="privacy.html">Palekana &amp; Kulekele</a> 
+      <a class="nav-link" href="terms.html">Nā ʻōlelo hoʻohana</a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <main> 
+    <h1 style="margin-bottom: 20px;">Nā Kūlana a me nā Kūlana o ka Pūnaewele</h1> 
+    <p>Ma online-qr-scanner.net, ʻike nui mākou i ka hilinaʻi āu e kau ai iā mākou a me kā mākou kuleana e pale i kāu pilikino. Ma ke ʻano he kuleana o kēia kuleana, ke kaʻana nei mākou iā ʻoe i ka ʻike a mākou e hōʻiliʻili ai i ka wā e hoʻohana ai ʻoe i kā mākou mea hana loiloi pūnaewele, no ke aha mākou e hōʻiliʻili ai a pehea mākou e hoʻohana ai e hoʻomaikaʻi i kou ʻike. Ma ka hoʻohana ʻana i ka online-qr-scanner.net, ʻae ʻoe i nā hana ʻikepili i wehewehe ʻia ma kēia ʻōlelo.</p> 
+    <h2>Hoʻohana i ka ʻike pilikino</h2> 
+    <p>Inā ʻoe e kau inoa i kā mākou leka uila a i ʻole newsletter online-qr-scanner.net hiki ke hoʻohana i kāu leka uila ʻike pilikino e haʻi iā ʻoe i nā huahana a i ʻole nā lawelawe ʻē aʻe i loaʻa mai online-qr-scanner.net a me kāna mau hui. Hiki iā online-qr-scanner.net ke hoʻokaʻaʻike aku iā ʻoe ma o nā noiʻi e hana i ka noiʻi e pili ana i kou manaʻo no nā lawelawe o kēia manawa a i ʻole nā lawelawe hou. E ʻoluʻolu e hoʻomanaʻo inā hōʻike pololei ʻoe i ka ʻike pilikino a i ʻole ka ʻikepili pilikino pilikino ma o ka blog online-qr-scanner.net, hiki ke ʻohi ʻia kēia ʻike a hoʻohana ʻia e nā poʻe ʻē aʻe.</p> 
+    <p>ʻAʻole kūʻai aku ʻo online-qr-scanner.net, hoʻolimalima a hoʻolimalima i kāna papa inoa mea kūʻai aku i nā ʻaoʻao ʻekolu. Hiki iā online-qr-scanner.net ke hoʻokaʻaʻike iā ʻoe i kēlā me kēia manawa ma ka ʻaoʻao o nā hoa pāʻoihana o waho e pili ana i kahi hāʻawi e pili ana iā ʻoe. I kēlā mau hihia, ʻaʻole i hoʻoili ʻia kāu ʻike pilikino pilikino (e-mail, inoa, helu wahi, helu kelepona) i ka ʻaoʻao ʻekolu. Eia hou, hiki i ka online-qr-scanner.net ke kaʻana like i ka ʻikepili me nā hoa hilinaʻi e kōkua iā mākou e hana i ka ʻikepili helu, hoʻouna iā ʻoe i ka leka uila a i ʻole ka leka uila, hāʻawi i ke kākoʻo o ka mea kūʻai aku, a i ʻole hoʻonohonoho i nā hoʻouna. Ua pāpā ʻia kēlā mau ʻaoʻao ʻekolu mai ka hoʻohana ʻana i kāu ʻike pilikino koe wale nō ka hāʻawi ʻana i kēia mau lawelawe i online-qr-scanner.net, a pono lākou e mālama i ka hūnā o kāu ʻike.</p> 
+    <p>online-qr-scanner.net e hōʻike i kāu ʻike pilikino, me ka ʻole o ka hoʻolaha ʻana, inā koi ʻia e ke kānāwai a i ʻole ma ka manaʻoʻiʻo maikaʻi he pono ia hana e: (a) hoʻokō i nā ʻōlelo a ke kānāwai lawelawe ʻia ke kaʻina kānāwai ma online-qr-scanner.net a i ʻole ka pūnaewele; (b) pale a pale i nā kuleana a waiwai paha o online-qr-scanner.net (me ka hoʻokō ʻana i kēia ʻaelike); a, (c) hana ma lalo o nā kūlana koʻikoʻi e pale i ka palekana pilikino o nā mea hoʻohana o online-qr-scanner.net, a i ʻole ka lehulehu.</p> 
+    <h2>ʻOhi ʻike</h2> 
+    <p>Hiki ke kiʻi lima ʻia nā ʻikepili āpau i hōʻiliʻili ʻia e ka mea hana online-qr-scanner.net e kekahi mau ala ʻē aʻe i loaʻa i ka lehulehu ma ka pūnaewele (Whois Lookup, Google Cached Pages, etc.). ʻO ia ke kumu i manaʻo ʻia ai kēlā me kēia hōʻike hoʻokahi i hana ʻia ma online-qr-scanner.net he 'lehulehu' a no laila mālama ʻia i loko o kā mākou waihona. Eia kekahi, hiki ke kuhikuhi ʻia e nā ʻenekini huli. ʻOhi a hoʻohana ʻo online-qr-scanner.net i ka ʻike pūnaewele e hana i kāna mea hana loiloi pūnaewele a hāʻawi i nā lawelawe āu i noi ai. Hiki i kēia ʻike ke komo: IP address, domain names, visited visitor, in-site and off-site SEO analysis, hoʻohana, manawa komo a me ka kuhikuhi ʻana i nā helu pūnaewele. Hoʻohana ʻia kēia ʻike e online-qr-scanner.net no ka hana ʻana o kāna lawelawe a no ka hāʻawi ʻana i nā ʻikepili maʻamau e pili ana i ka hoʻohana ʻana i ka mea paahana pūnaewele online-qr-scanner.net.</p> 
+    <h2>Kaohi ana</h2> 
+    <h3>Ua ʻae ʻoe ʻaʻole ʻoe e:</h3> 
+    <ul> 
+     <li>E hoʻolaha i ka ʻike no kēlā me kēia kumu me ka ʻole o ka palena ʻana i ka hōʻuluʻulu ʻana i kahi waihona i loko, ka hāʻawi hou ʻana a i ʻole ka hana hou ʻana o ka ʻike e ka paʻi a i ʻole ka media a i ʻole ma o kekahi pūnaewele kalepa, kelepona a i ʻole ka ʻōnaehana satellite.</li> 
+     <li>E hana i nā hana derivative o, reverse engineer, decompile, disassemble, hoʻololi, unuhi, hoʻouna, hoʻonohonoho, hoʻololi, kope, pūʻolo, kūʻai aku, sub-license, export, merge, hoʻololi, hoʻololi, hōʻaiʻē, hoʻolimalima, hoʻolimalima, hāʻawi, māhele, outsource, hoʻokipa, hoʻolaha, hoʻolako i kekahi kanaka a i ʻole hoʻohana ʻē aʻe, ma ke ʻano pololei a ʻaʻole pololei paha, ka ʻike / mea hana holoʻokoʻa a ʻāpana paha, ma kekahi ʻano a i ʻole ma nā ʻano mea ʻē aʻe, he kino, uila a i ʻole.</li> 
+     <li>E ʻae, e ʻae a i ʻole e hana i kekahi mea e hōʻino a hōʻino paha i nā kuleana kuleana o ka Hui a i kāna mea laikini a i ʻole e ʻae i kekahi ʻaoʻao ʻekolu e komo i ka ʻike/mea hana. ʻAʻole pili nā kapu i hōʻike ʻia ma kēia ʻaelike i ka palena palena ʻole i pāpā ʻia i nā kānāwai pili.</li> 
+     <li>E hoʻohana a i ʻole e hoʻāʻo e hoʻohana i ka polokalamu hopu pūnaewele ʻakomi (ʻike ʻia ʻo ka mea hoʻoiho pūnaewele a i ʻole polokalamu kope kope pūnaewele) e mālama i nā ʻaoʻao he nui mai ka pūnaewele no kekahi hoʻohana, me ka nānā ʻana ma waho.</li> 
+     <li>E hoʻohana i nā bots.</li> 
+     <li>E hoʻohana i ka polokalamu pale hoʻolaha e pale i ka hoʻouka ʻana a me ka hōʻike ʻana o ka hoʻolaha mai ka pūnaewele.</li> 
+    </ul> 
+    <h2>Palekana o kāu ʻike pilikino</h2> 
+    <p>ʻAʻohe ala o ka mālama ʻana i ka ʻike he 100% paʻa. Hoʻohana ʻo online-qr-scanner.net i nā ʻenehana palekana a me nā kaʻina hana e kōkua i ka pale ʻana i kāu ʻike pilikino mai ke komo ʻole ʻia, hoʻohana a hōʻike ʻole ʻia. Mālama ʻo online-qr-scanner.net i ka ʻike pilikino āu e hāʻawi ai ma nā kikowaena kamepiula ma kahi kaiapuni i hoʻomalu ʻia, palekana, pale ʻia mai ka ʻae ʻole ʻia, hoʻohana a hōʻike. Ke hoʻouna ʻia ka ʻike pilikino (e like me ka helu kāleka hōʻaiʻē) i nā pūnaewele ʻē aʻe, mālama ʻia ia ma o ka hoʻohana ʻana i ka hoʻopili, e like me ka protocol Secure Socket Layer (SSL).</p> 
+    <h2>Nā hoʻololi i kēia ʻōlelo</h2> 
+    <p>online-qr-scanner.net e hōʻano hou i kēia Kūlana o ka lawelawe e hōʻike i ka manaʻo o ka hui a me nā mea kūʻai aku. Paipai ʻo online-qr-scanner.net iā ʻoe e nānā i kēlā me kēia manawa i kēia Kūlana o ka lawelawe e ʻike ʻia pehea e pale ai ʻo online-qr-scanner.net i kāu ʻike. Ke hana ʻia kēlā hoʻololi, e hōʻano hou mākou i ka lā "Hoʻohou Hou" ma lalo nei. ʻO ka hoʻohana ʻana i kēia pūnaewele-qr-scanner.net e hōʻike ana i kou ʻae ʻana i kēia mau Kūlana o ka lawelawe.</p> 
+   </main> 
+  </div> 
+  <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start"> 
+   <div class="container"> 
+    <p class="mb-0" not-translate>© 2022 Online QR Scanner.</p> 
+   </div> 
+  </footer>   
+ </body>
+</html>

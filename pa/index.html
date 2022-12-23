@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pa">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <title>ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ</title> 
+  <meta name="description" content="QR ਕੋਡ ਸਕੈਨਰ ਇੱਕ ਔਨਲਾਈਨ ਸਕੈਨਰ ਹੈ ਅਤੇ QR ਕੋਡਾਂ ਦੀ ਪਛਾਣ ਕਰਨ ਲਈ ਸਭ ਤੋਂ ਤੇਜ਼ ਅਤੇ ਸਭ ਤੋਂ ਵਿਹਾਰਕ ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ ਹੈ। ਹਾਈ-ਸਪੀਡ ਸਕੈਨਿੰਗ, ਸਥਾਪਤ ਕਰਨ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ, ਸਕੈਨ ਸੰਪਾਦਨ।"> 
+  <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code,ਵੈਬ ਕਿਊਆਰਕੋਡ, ਵੈਬ ਕਿਆਰਆਰ, ਕਿਊਆਰ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨ, ਔਨਲਾਈਨ ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਰੀਡਰ, ਸਕੈਨਰ, ਸਕੈਨ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਮੈਂ ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਾਂ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ, ਸਕੈਨ ਐਪ , ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਗੂਗਲ ਕਿਊਆਰ ਕੋਡ, ਮੁਫ਼ਤ ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਨ, ਕਿਯੂਆਰ ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਿਵੇਂ ਕਰਨਾ ਹੈ"> 
+  <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes."> 
+  <meta property="og:title" content="ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png"> 
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script> 
+  <style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+		.camera-scanner-layout {
+			border: 3px dashed rgba(25,103,210,.5);
+			width: 100%;
+			height: 250px;
+			border-radius: 4px;
+			position: relative;
+			background: rgba(25,103,210,.1);
+		}
+		.camera-scanner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			background-color: #1967d2;
+			cursor: pointer;
+			border: none;
+			border-radius: 20px;
+			padding: 2px 14px;
+			font-size: 16px;
+			line-height: 40px;
+			font-weight: 600;
+			color: #ecf0f1;
+			box-shadow: rgb(78 132 253 / 16%) 0 3px 6px, rgb(78 132 253 / 23%) 0 3px 6px;
+		}
+
+	</style> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script> 
+  <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script> 
+  <link rel="alternate" hreflang="pa" href="https://online-qr-scanner.net/pa/index.html">
+  <link rel="alternate" hreflang="ar" href="https://online-qr-scanner.net/ar/index.html">
+  <link rel="alternate" hreflang="sq" href="https://online-qr-scanner.net/sq/index.html">
+  <link rel="alternate" hreflang="am" href="https://online-qr-scanner.net/am/index.html">
+  <link rel="alternate" hreflang="en" href="https://online-qr-scanner.net/index.html">
+  <link rel="alternate" hreflang="hy" href="https://online-qr-scanner.net/hy/index.html">
+  <link rel="alternate" hreflang="as" href="https://online-qr-scanner.net/as/index.html">
+  <link rel="alternate" hreflang="ay" href="https://online-qr-scanner.net/ay/index.html">
+  <link rel="alternate" hreflang="az" href="https://online-qr-scanner.net/az/index.html">
+  <link rel="alternate" hreflang="pl" href="https://online-qr-scanner.net/pl/index.html">
+  <link rel="alternate" hreflang="fa" href="https://online-qr-scanner.net/fa/index.html">
+  <link rel="alternate" hreflang="bm" href="https://online-qr-scanner.net/bm/index.html">
+  <link rel="alternate" hreflang="xh" href="https://online-qr-scanner.net/xh/index.html">
+  <link rel="alternate" hreflang="eu" href="https://online-qr-scanner.net/eu/index.html">
+  <link rel="alternate" hreflang="be" href="https://online-qr-scanner.net/be/index.html">
+  <link rel="alternate" hreflang="bn" href="https://online-qr-scanner.net/bn/index.html">
+  <link rel="alternate" hreflang="bho" href="https://online-qr-scanner.net/bho/index.html">
+  <link rel="alternate" hreflang="bs" href="https://online-qr-scanner.net/bs/index.html">
+  <link rel="alternate" hreflang="pt" href="https://online-qr-scanner.net/pt/index.html">
+  <link rel="alternate" hreflang="bg" href="https://online-qr-scanner.net/bg/index.html">
+  <link rel="alternate" hreflang="ca" href="https://online-qr-scanner.net/ca/index.html">
+  <link rel="alternate" hreflang="ceb" href="https://online-qr-scanner.net/ceb/index.html">
+  <link rel="alternate" hreflang="ny" href="https://online-qr-scanner.net/ny/index.html">
+  <link rel="alternate" hreflang="co" href="https://online-qr-scanner.net/co/index.html">
+  <link rel="alternate" hreflang="ht" href="https://online-qr-scanner.net/ht/index.html">
+  <link rel="alternate" hreflang="hr" href="https://online-qr-scanner.net/hr/index.html">
+  <link rel="alternate" hreflang="dv" href="https://online-qr-scanner.net/dv/index.html">
+  <link rel="alternate" hreflang="iw" href="https://online-qr-scanner.net/iw/index.html">
+  <link rel="alternate" hreflang="doi" href="https://online-qr-scanner.net/doi/index.html">
+  <link rel="alternate" hreflang="da" href="https://online-qr-scanner.net/da/index.html">
+  <link rel="alternate" hreflang="de" href="https://online-qr-scanner.net/de/index.html">
+  <link rel="alternate" hreflang="et" href="https://online-qr-scanner.net/et/index.html">
+  <link rel="alternate" hreflang="ee" href="https://online-qr-scanner.net/ee/index.html">
+  <link rel="alternate" hreflang="tl" href="https://online-qr-scanner.net/tl/index.html">
+  <link rel="alternate" hreflang="fy" href="https://online-qr-scanner.net/fy/index.html">
+  <link rel="alternate" hreflang="gd" href="https://online-qr-scanner.net/gd/index.html">
+  <link rel="alternate" hreflang="gl" href="https://online-qr-scanner.net/gl/index.html">
+  <link rel="alternate" hreflang="ka" href="https://online-qr-scanner.net/ka/index.html">
+  <link rel="alternate" hreflang="gn" href="https://online-qr-scanner.net/gn/index.html">
+  <link rel="alternate" hreflang="gu" href="https://online-qr-scanner.net/gu/index.html">
+  <link rel="alternate" hreflang="nl" href="https://online-qr-scanner.net/nl/index.html">
+  <link rel="alternate" hreflang="af" href="https://online-qr-scanner.net/af/index.html">
+  <link rel="alternate" hreflang="ko" href="https://online-qr-scanner.net/ko/index.html">
+  <link rel="alternate" hreflang="ha" href="https://online-qr-scanner.net/ha/index.html">
+  <link rel="alternate" hreflang="haw" href="https://online-qr-scanner.net/haw/index.html">
+  <link rel="alternate" hreflang="hi" href="https://online-qr-scanner.net/hi/index.html">
+  <link rel="alternate" hreflang="hmn" href="https://online-qr-scanner.net/hmn/index.html">
+  <link rel="alternate" hreflang="hu" href="https://online-qr-scanner.net/hu/index.html">
+  <link rel="alternate" hreflang="el" href="https://online-qr-scanner.net/el/index.html">
+  <link rel="alternate" hreflang="is" href="https://online-qr-scanner.net/is/index.html">
+  <link rel="alternate" hreflang="ig" href="https://online-qr-scanner.net/ig/index.html">
+  <link rel="alternate" hreflang="ilo" href="https://online-qr-scanner.net/ilo/index.html">
+  <link rel="alternate" hreflang="id" href="https://online-qr-scanner.net/id/index.html">
+  <link rel="alternate" hreflang="ga" href="https://online-qr-scanner.net/ga/index.html">
+  <link rel="alternate" hreflang="jw" href="https://online-qr-scanner.net/jw/index.html">
+  <link rel="alternate" hreflang="kn" href="https://online-qr-scanner.net/kn/index.html">
+  <link rel="alternate" hreflang="kk" href="https://online-qr-scanner.net/kk/index.html">
+  <link rel="alternate" hreflang="km" href="https://online-qr-scanner.net/km/index.html">
+  <link rel="alternate" hreflang="rw" href="https://online-qr-scanner.net/rw/index.html">
+  <link rel="alternate" hreflang="gom" href="https://online-qr-scanner.net/gom/index.html">
+  <link rel="alternate" hreflang="kri" href="https://online-qr-scanner.net/kri/index.html">
+  <link rel="alternate" hreflang="ku" href="https://online-qr-scanner.net/ku/index.html">
+  <link rel="alternate" hreflang="ckb" href="https://online-qr-scanner.net/ckb/index.html">
+  <link rel="alternate" hreflang="ky" href="https://online-qr-scanner.net/ky/index.html">
+  <link rel="alternate" hreflang="lo" href="https://online-qr-scanner.net/lo/index.html">
+  <link rel="alternate" hreflang="la" href="https://online-qr-scanner.net/la/index.html">
+  <link rel="alternate" hreflang="lv" href="https://online-qr-scanner.net/lv/index.html">
+  <link rel="alternate" hreflang="ln" href="https://online-qr-scanner.net/ln/index.html">
+  <link rel="alternate" hreflang="lt" href="https://online-qr-scanner.net/lt/index.html">
+  <link rel="alternate" hreflang="lg" href="https://online-qr-scanner.net/lg/index.html">
+  <link rel="alternate" hreflang="lb" href="https://online-qr-scanner.net/lb/index.html">
+  <link rel="alternate" hreflang="ms" href="https://online-qr-scanner.net/ms/index.html">
+  <link rel="alternate" hreflang="mk" href="https://online-qr-scanner.net/mk/index.html">
+  <link rel="alternate" hreflang="mai" href="https://online-qr-scanner.net/mai/index.html">
+  <link rel="alternate" hreflang="mg" href="https://online-qr-scanner.net/mg/index.html">
+  <link rel="alternate" hreflang="ml" href="https://online-qr-scanner.net/ml/index.html">
+  <link rel="alternate" hreflang="mt" href="https://online-qr-scanner.net/mt/index.html">
+  <link rel="alternate" hreflang="mi" href="https://online-qr-scanner.net/mi/index.html">
+  <link rel="alternate" hreflang="mr" href="https://online-qr-scanner.net/mr/index.html">
+  <link rel="alternate" hreflang="mni-Mtei" href="https://online-qr-scanner.net/mni-Mtei/index.html">
+  <link rel="alternate" hreflang="lus" href="https://online-qr-scanner.net/lus/index.html">
+  <link rel="alternate" hreflang="mn" href="https://online-qr-scanner.net/mn/index.html">
+  <link rel="alternate" hreflang="my" href="https://online-qr-scanner.net/my/index.html">
+  <link rel="alternate" hreflang="no" href="https://online-qr-scanner.net/no/index.html">
+  <link rel="alternate" hreflang="ne" href="https://online-qr-scanner.net/ne/index.html">
+  <link rel="alternate" hreflang="ru" href="https://online-qr-scanner.net/ru/index.html">
+  <link rel="alternate" hreflang="ja" href="https://online-qr-scanner.net/ja/index.html">
+  <link rel="alternate" hreflang="or" href="https://online-qr-scanner.net/or/index.html">
+  <link rel="alternate" hreflang="om" href="https://online-qr-scanner.net/om/index.html">
+  <link rel="alternate" hreflang="ps" href="https://online-qr-scanner.net/ps/index.html">
+  <link rel="alternate" hreflang="sa" href="https://online-qr-scanner.net/sa/index.html">
+  <link rel="alternate" hreflang="fr" href="https://online-qr-scanner.net/fr/index.html">
+  <link rel="alternate" hreflang="fi" href="https://online-qr-scanner.net/fi/index.html">
+  <link rel="alternate" hreflang="qu" href="https://online-qr-scanner.net/qu/index.html">
+  <link rel="alternate" hreflang="eo" href="https://online-qr-scanner.net/eo/index.html">
+  <link rel="alternate" hreflang="ro" href="https://online-qr-scanner.net/ro/index.html">
+  <link rel="alternate" hreflang="sm" href="https://online-qr-scanner.net/sm/index.html">
+  <link rel="alternate" hreflang="cs" href="https://online-qr-scanner.net/cs/index.html">
+  <link rel="alternate" hreflang="nso" href="https://online-qr-scanner.net/nso/index.html">
+  <link rel="alternate" hreflang="sr" href="https://online-qr-scanner.net/sr/index.html">
+  <link rel="alternate" hreflang="st" href="https://online-qr-scanner.net/st/index.html">
+  <link rel="alternate" hreflang="sn" href="https://online-qr-scanner.net/sn/index.html">
+  <link rel="alternate" hreflang="sd" href="https://online-qr-scanner.net/sd/index.html">
+  <link rel="alternate" hreflang="si" href="https://online-qr-scanner.net/si/index.html">
+  <link rel="alternate" hreflang="sk" href="https://online-qr-scanner.net/sk/index.html">
+  <link rel="alternate" hreflang="sl" href="https://online-qr-scanner.net/sl/index.html">
+  <link rel="alternate" hreflang="so" href="https://online-qr-scanner.net/so/index.html">
+  <link rel="alternate" hreflang="su" href="https://online-qr-scanner.net/su/index.html">
+  <link rel="alternate" hreflang="sw" href="https://online-qr-scanner.net/sw/index.html">
+  <link rel="alternate" hreflang="tg" href="https://online-qr-scanner.net/tg/index.html">
+  <link rel="alternate" hreflang="ta" href="https://online-qr-scanner.net/ta/index.html">
+  <link rel="alternate" hreflang="tt" href="https://online-qr-scanner.net/tt/index.html">
+  <link rel="alternate" hreflang="es" href="https://online-qr-scanner.net/es/index.html">
+  <link rel="alternate" hreflang="te" href="https://online-qr-scanner.net/te/index.html">
+  <link rel="alternate" hreflang="th" href="https://online-qr-scanner.net/th/index.html">
+  <link rel="alternate" hreflang="tr" href="https://online-qr-scanner.net/tr/index.html">
+  <link rel="alternate" hreflang="sv" href="https://online-qr-scanner.net/sv/index.html">
+  <link rel="alternate" hreflang="ti" href="https://online-qr-scanner.net/ti/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-qr-scanner.net/zh-CN/index.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-qr-scanner.net/zh-TW/index.html">
+  <link rel="alternate" hreflang="ts" href="https://online-qr-scanner.net/ts/index.html">
+  <link rel="alternate" hreflang="tk" href="https://online-qr-scanner.net/tk/index.html">
+  <link rel="alternate" hreflang="ak" href="https://online-qr-scanner.net/ak/index.html">
+  <link rel="alternate" hreflang="uk" href="https://online-qr-scanner.net/uk/index.html">
+  <link rel="alternate" hreflang="ur" href="https://online-qr-scanner.net/ur/index.html">
+  <link rel="alternate" hreflang="ug" href="https://online-qr-scanner.net/ug/index.html">
+  <link rel="alternate" hreflang="uz" href="https://online-qr-scanner.net/uz/index.html">
+  <link rel="alternate" hreflang="vi" href="https://online-qr-scanner.net/vi/index.html">
+  <link rel="alternate" hreflang="cy" href="https://online-qr-scanner.net/cy/index.html">
+  <link rel="alternate" hreflang="it" href="https://online-qr-scanner.net/it/index.html">
+  <link rel="alternate" hreflang="yi" href="https://online-qr-scanner.net/yi/index.html">
+  <link rel="alternate" hreflang="yo" href="https://online-qr-scanner.net/yo/index.html">
+  <link rel="alternate" hreflang="zu" href="https://online-qr-scanner.net/zu/index.html">
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="index.html"> <img src="/assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top">ਔਨਲਾਈਨ QR ਸਕੈਨਰ</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+     <div class="navbar-nav"> 
+      <a class="nav-link" href="index.html">ਘਰ</a> 
+      <a class="nav-link" href="about.html">ਬਾਰੇ</a> 
+      <a class="nav-link" href="privacy.html">ਪਰਾਈਵੇਟ ਨੀਤੀ</a> 
+      <a class="nav-link" href="terms.html">ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ</a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <div class="col-md-12 mt-3"> 
+    <h1>ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ</h1> 
+    <p>ਆਪਣੇ Chrome, Safari ਜਾਂ Firefox ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਆਪਣਾ QR ਕੋਡ ਆਨਲਾਈਨ ਸਕੈਨ ਕਰੋ।</p> 
+   </div> 
+   <div class="row col-md-12" style="margin: 0px;"> 
+    <a href="camera.html" class="col-md-6 camera-scanner-layout"> <button type="button" class="camera-scanner">QR ਕੋਡ ਕੈਮਰਾ ਸਕੈਨ ਕਰੋ</button> </a> 
+    <div class="col-md-6 camera-scanner-layout" id="openUpload" style="cursor: pointer;"> 
+     <button type="button" class="btn btn-primary">QR ਕੋਡ ਅੱਪਲੋਡ ਫ਼ਾਈਲ ਨੂੰ ਸਕੈਨ ਕਰੋ</button> 
+    </div> 
+   </div> 
+   <div class="col-md-12" id="qrCodeUpload" style="margin-top: 30px;display: none;"> 
+    <div style="border: 3px dashed rgba(25,103,210,.5);padding: 15px;"> 
+     <input type="file" accept="image/*" id="decode-file" style="display: none;"> 
+     <p id="decode-text" class="hide"> <textarea class="form-control" rows="5" id="result" readonly></textarea></p> 
+     <button type="button" class="btn" data-original-title="Copied!" data-clipboard-target="#result" style="display: block; margin: auto;font-size: 14px;font-weight: 300;outline: none;cursor: pointer;color: #fff;border-radius: 3px;padding: 5px 12px;line-height: 20px;background-color: #21262d;border: 1px solid #30363d;">ਕਾਪੀ ਕਰੋ</button> 
+     <br> 
+     <br> 
+     <canvas id="decode-canvas" style="width: 100%"></canvas> 
+    </div> 
+   </div> 
+   <div class="col-md-12" style="margin-top: 30px"> 
+    <h2>QR ਕੋਡ ਆਨਲਾਈਨ ਸਕੈਨ ਕਰੋ</h2> 
+    <p>ਇਸ ਵਿੱਚ ਕੋਈ ਸ਼ੱਕ ਨਹੀਂ ਹੈ ਕਿ ਤਕਨਾਲੋਜੀ ਦੁਨੀਆ ਦੇ ਸਾਰੇ ਹਿੱਸਿਆਂ ਵਿੱਚ ਮਹੱਤਵਪੂਰਨ ਵਿਕਾਸ ਦੇਖ ਰਹੀ ਹੈ, ਅਤੇ ਕਈ ਉਦਯੋਗ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਸਦੀ ਤਰੱਕੀ ਤੋਂ ਲਾਭ ਹੋਇਆ ਹੈ। ਅੱਜਕੱਲ੍ਹ, ਲੋਕ ਇੱਕ ਵਰਗ ਬਾਰਕੋਡ ਦੇਖਦੇ ਹਨ ਜੋ ਇੱਕ ਬਿਜ਼ਨਸ ਕਾਰਡ ਜਾਂ ਇੱਕ ਲਾਈਟ ਪੋਲ ਦੇ ਪਿਛਲੇ ਪਾਸੇ ਦੇਖਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਪਿਕਸਲ ਕੋਡ QR ਕੋਡ ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੋਡ ਮੈਗਜ਼ੀਨਾਂ, ਅਖਬਾਰਾਂ, ਫਲਾਈਓਵਰਾਂ ਅਤੇ ਪੋਸਟਰਾਂ ਵਿੱਚ ਦੇਖੇ ਜਾ ਸਕਦੇ ਹਨ।</p> 
+    <p>ਸਾਡੇ ਆਲੇ ਦੁਆਲੇ ਇੱਕ QR ਕੋਡ ਲੱਭਣਾ ਮੁਕਾਬਲਤਨ ਆਸਾਨ ਹੋ ਗਿਆ ਹੈ, ਅਤੇ ਇਸ ਬਾਰੇ ਸਭ ਤੋਂ ਵਧੀਆ ਗੱਲ ਇਹ ਹੈ ਕਿ ਇਹ ਕੰਪਿਊਟਰ, ਸਮਾਰਟਫ਼ੋਨ ਜਾਂ ਟੈਬਲੇਟਾਂ ਰਾਹੀਂ ਦੁਨੀਆ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਵਿੱਚ ਸਾਡੀ ਮਦਦ ਕਰਦਾ ਹੈ। ਹਾਲਾਂਕਿ ਇਹ 90 ਦੇ ਦਹਾਕੇ ਦੇ ਅੱਧ ਦੀ ਕਾਢ ਹੈ, ਇਹ ਉਦੋਂ ਤੱਕ ਗਤੀ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਨਹੀਂ ਸੀ ਜਦੋਂ ਤੱਕ ਅਸੀਂ ਮਾਰਕੀਟ ਵਿੱਚ ਸਮਾਰਟਫ਼ੋਨ ਨਹੀਂ ਦੇਖੇ। ਆਪਣੇ QR ਕੋਡ ਨੂੰ ਕਿਸੇ ਵੀ ਸਮੇਂ ਅਤੇ ਕਿਤੇ ਵੀ ਸਕੈਨ ਕਰਨ ਲਈ, ਇੱਕ QR ਕੋਡ ਸਕੈਨਰ ਇੱਕ ਸੰਪੂਰਨ ਸਾਧਨ ਹੈ ਜੋ ਤੁਹਾਨੂੰ ਇੱਕ ਥਾਂ ਤੋਂ QR ਕੋਡ ਬਣਾਉਣ, ਡਾਊਨਲੋਡ ਕਰਨ ਅਤੇ ਸਕੈਨ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ।</p> 
+    <h3 class="how-to-heading">ਇੱਕ QR ਕੋਡ ਦੀ ਜਾਣ-ਪਛਾਣ:</h3> 
+    <p>ਇੱਕ QR ਕੋਡ ਨੂੰ ਬਹੁਤ ਸਾਰੇ ਲੋਕਾਂ ਦੁਆਰਾ ਇੱਕ ਤੇਜ਼ ਜਵਾਬ ਕੋਡ ਵਜੋਂ ਵੀ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ ਜੋ ਇੱਕ ਬਾਰਕੋਡ ਦਾ ਦੋ-ਅਯਾਮੀ ਸੰਸਕਰਣ ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ। ਇਹ ਮੋਬਾਈਲ ਡਿਵਾਈਸ 'ਤੇ ਸਕੈਨਰ ਦੀ ਮਦਦ ਨਾਲ ਚੰਗੀ ਤਰ੍ਹਾਂ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪਹੁੰਚਾਉਣ ਦੇ ਸਮਰੱਥ ਹੈ। ਇਹ ਵਿਸ਼ੇਸ਼ ਅੱਖਰ ਅਤੇ ਵਿਰਾਮ ਚਿੰਨ੍ਹਾਂ ਸਮੇਤ 7089 ਅੰਕਾਂ ਤੱਕ ਸਕੋਰ ਕਰ ਸਕਦਾ ਹੈ। ਇਹ ਕੋਡ ਕਿਸੇ ਵੀ ਸ਼ਬਦ ਅਤੇ ਵਾਕਾਂਸ਼ ਨੂੰ ਏਨਕੋਡ ਕਰਨ ਦੇ ਸਮਰੱਥ ਹੈ।</p> 
+    <p>ਜ਼ਿਕਰਯੋਗ ਹੈ ਕਿ ਇਸ QR ਕੋਡ ਵਿੱਚ ਕਾਲੇ ਵਰਗ ਅਤੇ ਬਿੰਦੀਆਂ ਹਨ ਜੋ ਵੱਖ-ਵੱਖ ਧੁੰਦਲੇ ਪੈਟਰਨਾਂ ਦੇ ਨਾਲ ਆਉਂਦੀਆਂ ਹਨ। ਇਹ ਸਾਰੇ ਪੈਟਰਨ ਇੱਕ ਸਫੈਦ ਬੈਕਗ੍ਰਾਊਂਡ ਦੇ ਨਾਲ ਇੱਕ ਵਰਗ ਗਰਿੱਡ ਵਿੱਚ ਵਿਵਸਥਿਤ ਕੀਤੇ ਗਏ ਹਨ। ਸਾਰੀ ਜਾਣਕਾਰੀ ਇਹਨਾਂ ਪੈਟਰਨਾਂ ਤੋਂ ਕੱਢੀ ਜਾਂਦੀ ਹੈ। ਜਦੋਂ ਅਸੀਂ ਮਿਆਰੀ ਬਾਰਕੋਡਾਂ ਬਾਰੇ ਗੱਲ ਕਰਦੇ ਹਾਂ, ਤਾਂ ਇਹ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਸਕੈਨ ਕਰਨ ਦੇ ਸਮਰੱਥ ਹੁੰਦੇ ਹਨ ਅਤੇ ਥੋੜ੍ਹੀ ਜਿਹੀ ਜਾਣਕਾਰੀ ਸਟੋਰ ਕਰ ਸਕਦੇ ਹਨ। ਇੱਕ QR ਕੋਡ ਦੋ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਸਕੈਨ ਕਰਨ ਦੇ ਸਮਰੱਥ ਹੈ ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਡੇਟਾ ਰੱਖ ਸਕਦਾ ਹੈ।</p> 
+    <h3 class="how-to-heading">QR ਕੋਡ ਦੀਆਂ ਕਿਸਮਾਂ:</h3> 
+    <h4>ਸਥਿਰ QR ਕੋਡ:</h4> 
+    <p>ਇਸ QR ਕੋਡ ਵਿੱਚ ਉਹ ਸਾਰੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ ਜੋ ਸਥਿਰ ਰਹਿੰਦੀ ਹੈ ਅਤੇ ਇੱਕ ਵਾਰ ਤਿਆਰ ਹੋਣ ਤੋਂ ਬਾਅਦ ਸੰਪਾਦਿਤ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ। ਇੱਕ ਸਥਿਰ QR ਕੋਡ ਨਿੱਜੀ ਵਰਤੋਂ ਦੇ ਨਾਲ-ਨਾਲ QR ਕੋਡ API ਲਈ ਵੀ ਵਧੀਆ ਹੈ। ਇਹ ਕਰਮਚਾਰੀ ਆਈਡੀ, ਤਕਨੀਕੀ ਉਤਪਾਦ ਦਸਤਾਵੇਜ਼, ਇਵੈਂਟ ਬੈਜ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ ਬਣਾਉਣ ਦੇ ਸਮਰੱਥ ਹੈ। ਜਿਵੇਂ ਕਿ ਇੱਕ ਸਥਿਰ QR ਕੋਡ ਦੀ ਇੱਕ ਸਥਿਰ ਪ੍ਰਕਿਰਤੀ ਹੁੰਦੀ ਹੈ, ਬਹੁਤ ਸਾਰੇ ਲੋਕਾਂ ਨੂੰ ਇਹ ਮਾਰਕੀਟਿੰਗ ਮੁਹਿੰਮਾਂ ਜਾਂ ਕਾਰੋਬਾਰਾਂ ਲਈ ਆਦਰਸ਼ ਨਹੀਂ ਲੱਗਦਾ।</p> 
+    <p>ਇੱਕ ਸਥਿਰ QR ਕੋਡ Wi-Fi ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਇਹ ਖਾਸ ਬਿਟਕੋਇਨ ਵਿੱਚ ਵੀ ਦੇਖਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਕਿਉਂਕਿ ਬਿਟਕੋਇਨ ਨੂੰ ਇੱਕ QR ਕੋਡ ਵਿੱਚ ਬਦਲ ਕੇ ਮੁਦਰਾ ਲੈਣ-ਦੇਣ ਨੂੰ ਸੁਚਾਰੂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਕਿਉਂਕਿ QR ਕੋਡ 300 ਅੱਖਰਾਂ ਤੱਕ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰ ਸਕਦਾ ਹੈ, ਇਸਲਈ ਤੁਸੀਂ ਇੰਟਰਨੈਟ ਦੀ ਵਰਤੋਂ ਕੀਤੇ ਬਿਨਾਂ ਗਾਹਕਾਂ ਨੂੰ ਕੋਈ ਵੀ ਸੁਨੇਹਾ ਪੇਸ਼ ਕਰ ਸਕਦੇ ਹੋ। vCard ਕੋਡ ਦੀ ਸਕੈਨਿੰਗ ਰਾਹੀਂ, ਤੁਸੀਂ ਗਾਹਕਾਂ ਨਾਲ ਈਮੇਲ, ਫ਼ੋਨ ਨੰਬਰ ਅਤੇ ਵੈੱਬਸਾਈਟ ਦਾ ਪਤਾ ਸਾਂਝਾ ਕਰ ਸਕਦੇ ਹੋ।</p> 
+    <h4>ਡਾਇਨਾਮਿਕ QR ਕੋਡ:</h4> 
+    <p>ਸਥਿਰ QR ਕੋਡ ਦੀ ਤੁਲਨਾ ਵਿੱਚ, ਡਾਇਨਾਮਿਕ QR ਕੋਡ ਨੂੰ ਜਿੰਨੀ ਵਾਰ ਤੁਸੀਂ ਚਾਹੋ ਅੱਪਡੇਟ, ਸੰਪਾਦਿਤ ਅਤੇ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹੀ ਕਾਰਨ ਹੈ ਕਿ ਇਹ ਕਿਸੇ ਵੀ ਵਪਾਰ ਜਾਂ ਮਾਰਕੀਟ ਦੇ ਉਦੇਸ਼ ਲਈ ਸ਼ਾਨਦਾਰ ਹੈ. ਜਦੋਂ ਸਥਿਰ QR ਕੋਡ ਵਿੱਚ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਦਰਜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਇਹ ਗੁੰਝਲਦਾਰ ਹੋ ਜਾਂਦੀ ਹੈ। ਹਾਲਾਂਕਿ, ਡਾਇਨਾਮਿਕ QR ਕੋਡਾਂ ਨਾਲ ਚੀਜ਼ਾਂ ਵੱਖਰੀਆਂ ਹਨ ਕਿਉਂਕਿ ਸਮੱਗਰੀ ਕੋਡ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ, ਪਰ ਇਸਦੇ ਲਈ ਇੱਕ URL ਨਿਰਧਾਰਤ ਕੀਤਾ ਗਿਆ ਹੈ।</p> 
+    <p>ਡਾਇਨਾਮਿਕ QR ਕੋਡ ਬਾਰੇ ਸਭ ਤੋਂ ਵਧੀਆ ਗੱਲ ਇਹ ਹੈ ਕਿ ਇਹ ਛੋਟਾ ਹੈ ਅਤੇ ਇਸਨੂੰ ਆਸਾਨੀ ਨਾਲ ਪੈਕੇਜਿੰਗ ਡਿਜ਼ਾਈਨ ਅਤੇ ਪ੍ਰਿੰਟ ਸਮੱਗਰੀ ਵਿੱਚ ਜੋੜਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਡਾਇਨਾਮਿਕ QR ਕੋਡਾਂ ਦੀ ਇੱਕ ਹੋਰ ਵੱਡੀ ਵਿਸ਼ੇਸ਼ਤਾ ਇਹ ਹੈ ਕਿ ਤੁਹਾਡੇ ਲਈ ਸਕੈਨ ਕਦੋਂ, ਕਿੱਥੇ ਅਤੇ ਕਿਸ ਡਿਵਾਈਸ ਦੁਆਰਾ ਕੀਤਾ ਗਿਆ ਸੀ ਇਸ ਤੱਕ ਪਹੁੰਚ ਕਰਨਾ ਸੰਭਵ ਹੋ ਜਾਂਦਾ ਹੈ।</p> 
+    <h3 class="how-to-heading">ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ ਕੀ ਹੈ?</h3> 
+    <p>ਇੱਕ QR ਕੋਡ ਸਕੈਨਰ ਔਨਲਾਈਨ ਇੱਕ ਮੁਫਤ ਔਨਲਾਈਨ ਐਪਲੀਕੇਸ਼ਨ ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ ਜੋ ਮੋਬਾਈਲ ਫੋਨ ਕੈਮਰੇ ਜਾਂ ਚਿੱਤਰ ਤੋਂ QR ਕੋਡਾਂ ਨੂੰ ਸਕੈਨ ਕਰਨ ਵਿੱਚ ਮਦਦਗਾਰ ਹੁੰਦਾ ਹੈ। ਔਨਲਾਈਨ ਸਕੈਨਰ ਬਾਰੇ ਸਭ ਤੋਂ ਵਧੀਆ ਗੱਲ ਇਹ ਹੈ ਕਿ ਇਹ ਕਿਸੇ ਵੀ ਚਿੱਤਰ 'ਤੇ ਕਈ ਬਾਰਕੋਡਾਂ ਨੂੰ ਲੱਭ ਅਤੇ ਸਕੈਨ ਕਰ ਸਕਦਾ ਹੈ। ਇੱਕ ਸਮਰਪਿਤ ਐਪ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਨ ਵਾਲੀਆਂ ਸਾਈਟਾਂ ਹਨ, ਪਰ ਜਦੋਂ ਤੁਹਾਡੇ ਕੋਲ ਇੱਕ ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਤੁਰੰਤ ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਇਸ ਸਟੋਰੇਜ ਨੂੰ ਆਪਣੇ ਫ਼ੋਨ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਕਰ ਸਕਦੇ ਹੋ।</p> 
+    <p>QR ਕੋਡ ਸਕੈਨਰ ਦਾ ਵਧੀਆ ਐਲਗੋਰਿਦਮ ਤੁਹਾਨੂੰ ਖਰਾਬ ਹੋਏ QR ਕੋਡਾਂ ਨੂੰ ਵੀ ਸਕੈਨ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ। ਇਹ QR ਕੋਡ ਸਕੈਨਰ ਵੱਖ-ਵੱਖ ਕਿਸਮਾਂ ਦੇ ਇਨਪੁਟ ਫਾਰਮੈਟਾਂ ਦਾ ਸਮਰਥਨ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ JPEG, GIF, PNG, ਅਤੇ BMP ਸ਼ਾਮਲ ਹਨ। ਇਸ ਤੋਂ ਇਲਾਵਾ, QR ਕੋਡ ਸਕੈਨਰ ਸਾਰੇ ਕੰਪਿਊਟਰਾਂ ਅਤੇ ਸਮਾਰਟਫ਼ੋਨਾਂ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ, ਭਾਵੇਂ ਇਹ ਵਿੰਡੋਜ਼, ਐਂਡਰੌਇਡ, ਆਈਓਐਸ, ਜਾਂ ਕ੍ਰੋਮਓਐਸ ਹੋਵੇ।</p> 
+    <h3 class="how-to-heading">ਸਿੱਟਾ:</h3> 
+    <p class="about-bold">ਜ਼ਿਆਦਾਤਰ ਸਮਾਰਟਫ਼ੋਨ QR ਕੋਡ ਸਕੈਨਰ ਨਾਲ ਆਉਂਦੇ ਹਨ, ਅਤੇ ਜਿਨ੍ਹਾਂ ਕੋਲ ਨਹੀਂ ਹੈ ਉਹ ਇਸਨੂੰ ਆਸਾਨੀ ਨਾਲ ਡਾਊਨਲੋਡ ਕਰ ਸਕਦੇ ਹਨ। ਹਾਲਾਂਕਿ ਮਾਰਕੀਟ ਵਿੱਚ ਕਈ QR ਕੋਡ ਸਕੈਨਿੰਗ ਐਪਸ ਮੌਜੂਦ ਹਨ, QR CodeScannerOnline.Com ਵਰਗੀਆਂ ਸਾਈਟਾਂ QR ਕੋਡ ਸਕੈਨਰ ਦੀ ਵਰਤੋਂ ਕਰਨਾ ਵੀ ਸੰਭਵ ਹੈ, QR ਕੋਡ ਵਿੱਚ ਕੋਡ ਕੀਤੀ ਗਈ ਕਿਸੇ ਵੀ ਜਾਣਕਾਰੀ ਨੂੰ ਸਕੈਨ ਕਰਨ ਲਈ ਇੱਕ ਮੁਫਤ ਉਪਯੋਗਤਾ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦਾ ਹੈ। ਇਸਦੇ ਕਾਰਨ, ਪਿਛਲੇ ਕੁਝ ਸਾਲਾਂ ਵਿੱਚ QR ਕੋਡਾਂ ਦੀ ਜ਼ਰੂਰਤ ਬਹੁਤ ਵਧ ਗਈ ਹੈ।</p> 
+   </div> 
+  </div> 
+  <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start"> 
+   <div class="container"> 
+    <p class="mb-0" not-translate>© 2022 Online QR Scanner.</p> 
+   </div> 
+  </footer> 
+  <script>
+		var clipboard = new ClipboardJS('.btn');
+
+		clipboard.on('success', function(e) {
+			e.clearSelection();
+		});
+			
+		var hasImage = false;
+		var imageData = null;
+		var decodeText = $("#decode-text");
+		var canvas = $("#decode-canvas")[0];
+		var context = canvas.getContext("2d");
+		var decodeResult = decodeText.find("textarea");
+
+		function resetDecoder() {
+			hasImage = false;
+			imageData = null;
+
+			decodeResult.val("");
+			decodeText.addClass("hide");
+		}
+
+		function drawImage(src) {
+			var img = new Image();
+
+			img.crossOrigin = "anonymous";
+
+			img.onload = function () {
+				var width = img.width;
+				var height = img.height;
+				var actualWidth = Math.min(960, width);
+				var actualHeight = height * (actualWidth / width);
+
+				hasImage = true;
+				canvas.width = actualWidth;
+				canvas.height = actualHeight;
+
+				context.drawImage(img, 0, 0, width, height, 0, 0, actualWidth, actualHeight);
+
+				imageData = context.getImageData(0, 0, actualWidth, actualHeight);
+			};
+
+			img.src = src;
+		}
+
+		$("#decode-file").on("change", function (e) {
+			var file = e.target.files[0];
+
+			if (file) {
+				resetDecoder();
+
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					drawImage(e.target.result);
+					$("#qrCodeUpload").show();
+
+					setTimeout(function () {
+						decodeAction();
+					}, 500);
+				};
+
+				reader.readAsDataURL(file);
+			}
+		});
+
+		function getImageData() {
+			imageData && context.putImageData(imageData, 0, 0);
+
+			return imageData || context.getImageData(0, 0, canvas.width, canvas.height);
+		}
+
+		function getModuleSize(location, version) {
+			var topLeft = location.topLeft;
+			var topRight = location.topRight;
+			var a = Math.abs(topRight.x - topLeft.x);
+			var b = Math.abs(topRight.y - topLeft.y);
+			var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+			return c / (version * 4 + 17);
+		}
+
+		function markFinderPattern(x, y, moduleSize) {
+			context.fillStyle = "#00ff00";
+
+			context.beginPath();
+			context.arc(x, y, moduleSize * 0.75, 0, 2 * Math.PI);
+			context.fill();
+		}
+
+		function markQRCodeArea(location, version) {
+			context.lineWidth = 2;
+			context.strokeStyle = "#00ff00";
+
+			context.beginPath();
+			context.moveTo(location.topLeft.x, location.topLeft.y);
+			context.lineTo(location.topRight.x, location.topRight.y);
+			context.lineTo(location.bottomRight.x, location.bottomRight.y);
+			context.lineTo(location.bottomLeft.x, location.bottomLeft.y);
+			context.lineTo(location.topLeft.x, location.topLeft.y);
+			context.stroke();
+
+			var moduleSize = getModuleSize(location, version);
+
+			markFinderPattern(location.topLeftFinder.x, location.topLeftFinder.y, moduleSize);
+			markFinderPattern(location.topRightFinder.x, location.topRightFinder.y, moduleSize);
+			markFinderPattern(location.bottomLeftFinder.x, location.bottomLeftFinder.y, moduleSize);
+		}
+
+		function decodeAction() {
+			if (!hasImage) {
+				return alert("Please select a QR code picture");
+			}
+
+			var imageData = getImageData();
+			var result = new QRCode.Decoder().setOptions({ canOverwriteImage: false }).decode(imageData.data, imageData.width, imageData.height);
+
+			if (result) {
+				decodeResult.val(result.data);
+				decodeText.removeClass("hide");
+
+				markQRCodeArea(result.location, result.version);
+
+				console && console.log(result);
+			} else {
+				alert("QR code decoding failed");
+			}
+		}
+		
+		$("#openUpload").click(function () {
+			$("#decode-file").click();
+		});
+
+	</script>   
+ </body>
+</html>

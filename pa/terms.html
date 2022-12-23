@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pa">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <title>ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ - ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ</title> 
+  <meta name="description" content="QR ਕੋਡ ਸਕੈਨਰ ਇੱਕ ਔਨਲਾਈਨ ਸਕੈਨਰ ਹੈ ਅਤੇ QR ਕੋਡਾਂ ਦੀ ਪਛਾਣ ਕਰਨ ਲਈ ਸਭ ਤੋਂ ਤੇਜ਼ ਅਤੇ ਸਭ ਤੋਂ ਵਿਹਾਰਕ ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ ਹੈ। ਹਾਈ-ਸਪੀਡ ਸਕੈਨਿੰਗ, ਸਥਾਪਤ ਕਰਨ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ, ਸਕੈਨ ਸੰਪਾਦਨ।"> 
+  <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code,ਵੈਬ ਕਿਊਆਰਕੋਡ, ਵੈਬ ਕਿਆਰਆਰ, ਕਿਊਆਰ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨ, ਔਨਲਾਈਨ ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਰੀਡਰ, ਸਕੈਨਰ, ਸਕੈਨ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਮੈਂ ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਾਂ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ, ਸਕੈਨ ਐਪ , ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਕਿਊਆਰ ਕੋਡ ਨੂੰ ਕਿਵੇਂ ਸਕੈਨ ਕਰਨਾ ਹੈ, ਗੂਗਲ ਕਿਊਆਰ ਕੋਡ, ਮੁਫ਼ਤ ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਰ, ਕਿਊਆਰ ਕੋਡ ਸਕੈਨਨ, ਕਿਯੂਆਰ ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਿਵੇਂ ਕਰਨਾ ਹੈ"> 
+  <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes."> 
+  <meta property="og:title" content="ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ - ਔਨਲਾਈਨ QR ਕੋਡ ਸਕੈਨਰ"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png"> 
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script> 
+  <style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+	</style> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script> 
+  <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script> 
+  <link rel="alternate" hreflang="pa" href="https://online-qr-scanner.net/pa/terms.html">
+  <link rel="alternate" hreflang="ar" href="https://online-qr-scanner.net/ar/terms.html">
+  <link rel="alternate" hreflang="sq" href="https://online-qr-scanner.net/sq/terms.html">
+  <link rel="alternate" hreflang="am" href="https://online-qr-scanner.net/am/terms.html">
+  <link rel="alternate" hreflang="en" href="https://online-qr-scanner.net/terms.html">
+  <link rel="alternate" hreflang="hy" href="https://online-qr-scanner.net/hy/terms.html">
+  <link rel="alternate" hreflang="as" href="https://online-qr-scanner.net/as/terms.html">
+  <link rel="alternate" hreflang="ay" href="https://online-qr-scanner.net/ay/terms.html">
+  <link rel="alternate" hreflang="az" href="https://online-qr-scanner.net/az/terms.html">
+  <link rel="alternate" hreflang="pl" href="https://online-qr-scanner.net/pl/terms.html">
+  <link rel="alternate" hreflang="fa" href="https://online-qr-scanner.net/fa/terms.html">
+  <link rel="alternate" hreflang="bm" href="https://online-qr-scanner.net/bm/terms.html">
+  <link rel="alternate" hreflang="xh" href="https://online-qr-scanner.net/xh/terms.html">
+  <link rel="alternate" hreflang="eu" href="https://online-qr-scanner.net/eu/terms.html">
+  <link rel="alternate" hreflang="be" href="https://online-qr-scanner.net/be/terms.html">
+  <link rel="alternate" hreflang="bn" href="https://online-qr-scanner.net/bn/terms.html">
+  <link rel="alternate" hreflang="bho" href="https://online-qr-scanner.net/bho/terms.html">
+  <link rel="alternate" hreflang="bs" href="https://online-qr-scanner.net/bs/terms.html">
+  <link rel="alternate" hreflang="pt" href="https://online-qr-scanner.net/pt/terms.html">
+  <link rel="alternate" hreflang="bg" href="https://online-qr-scanner.net/bg/terms.html">
+  <link rel="alternate" hreflang="ca" href="https://online-qr-scanner.net/ca/terms.html">
+  <link rel="alternate" hreflang="ceb" href="https://online-qr-scanner.net/ceb/terms.html">
+  <link rel="alternate" hreflang="ny" href="https://online-qr-scanner.net/ny/terms.html">
+  <link rel="alternate" hreflang="co" href="https://online-qr-scanner.net/co/terms.html">
+  <link rel="alternate" hreflang="ht" href="https://online-qr-scanner.net/ht/terms.html">
+  <link rel="alternate" hreflang="hr" href="https://online-qr-scanner.net/hr/terms.html">
+  <link rel="alternate" hreflang="dv" href="https://online-qr-scanner.net/dv/terms.html">
+  <link rel="alternate" hreflang="iw" href="https://online-qr-scanner.net/iw/terms.html">
+  <link rel="alternate" hreflang="doi" href="https://online-qr-scanner.net/doi/terms.html">
+  <link rel="alternate" hreflang="da" href="https://online-qr-scanner.net/da/terms.html">
+  <link rel="alternate" hreflang="de" href="https://online-qr-scanner.net/de/terms.html">
+  <link rel="alternate" hreflang="et" href="https://online-qr-scanner.net/et/terms.html">
+  <link rel="alternate" hreflang="ee" href="https://online-qr-scanner.net/ee/terms.html">
+  <link rel="alternate" hreflang="tl" href="https://online-qr-scanner.net/tl/terms.html">
+  <link rel="alternate" hreflang="fy" href="https://online-qr-scanner.net/fy/terms.html">
+  <link rel="alternate" hreflang="gd" href="https://online-qr-scanner.net/gd/terms.html">
+  <link rel="alternate" hreflang="gl" href="https://online-qr-scanner.net/gl/terms.html">
+  <link rel="alternate" hreflang="ka" href="https://online-qr-scanner.net/ka/terms.html">
+  <link rel="alternate" hreflang="gn" href="https://online-qr-scanner.net/gn/terms.html">
+  <link rel="alternate" hreflang="gu" href="https://online-qr-scanner.net/gu/terms.html">
+  <link rel="alternate" hreflang="nl" href="https://online-qr-scanner.net/nl/terms.html">
+  <link rel="alternate" hreflang="af" href="https://online-qr-scanner.net/af/terms.html">
+  <link rel="alternate" hreflang="ko" href="https://online-qr-scanner.net/ko/terms.html">
+  <link rel="alternate" hreflang="ha" href="https://online-qr-scanner.net/ha/terms.html">
+  <link rel="alternate" hreflang="haw" href="https://online-qr-scanner.net/haw/terms.html">
+  <link rel="alternate" hreflang="hi" href="https://online-qr-scanner.net/hi/terms.html">
+  <link rel="alternate" hreflang="hmn" href="https://online-qr-scanner.net/hmn/terms.html">
+  <link rel="alternate" hreflang="hu" href="https://online-qr-scanner.net/hu/terms.html">
+  <link rel="alternate" hreflang="el" href="https://online-qr-scanner.net/el/terms.html">
+  <link rel="alternate" hreflang="is" href="https://online-qr-scanner.net/is/terms.html">
+  <link rel="alternate" hreflang="ig" href="https://online-qr-scanner.net/ig/terms.html">
+  <link rel="alternate" hreflang="ilo" href="https://online-qr-scanner.net/ilo/terms.html">
+  <link rel="alternate" hreflang="id" href="https://online-qr-scanner.net/id/terms.html">
+  <link rel="alternate" hreflang="ga" href="https://online-qr-scanner.net/ga/terms.html">
+  <link rel="alternate" hreflang="jw" href="https://online-qr-scanner.net/jw/terms.html">
+  <link rel="alternate" hreflang="kn" href="https://online-qr-scanner.net/kn/terms.html">
+  <link rel="alternate" hreflang="kk" href="https://online-qr-scanner.net/kk/terms.html">
+  <link rel="alternate" hreflang="km" href="https://online-qr-scanner.net/km/terms.html">
+  <link rel="alternate" hreflang="rw" href="https://online-qr-scanner.net/rw/terms.html">
+  <link rel="alternate" hreflang="gom" href="https://online-qr-scanner.net/gom/terms.html">
+  <link rel="alternate" hreflang="kri" href="https://online-qr-scanner.net/kri/terms.html">
+  <link rel="alternate" hreflang="ku" href="https://online-qr-scanner.net/ku/terms.html">
+  <link rel="alternate" hreflang="ckb" href="https://online-qr-scanner.net/ckb/terms.html">
+  <link rel="alternate" hreflang="ky" href="https://online-qr-scanner.net/ky/terms.html">
+  <link rel="alternate" hreflang="lo" href="https://online-qr-scanner.net/lo/terms.html">
+  <link rel="alternate" hreflang="la" href="https://online-qr-scanner.net/la/terms.html">
+  <link rel="alternate" hreflang="lv" href="https://online-qr-scanner.net/lv/terms.html">
+  <link rel="alternate" hreflang="ln" href="https://online-qr-scanner.net/ln/terms.html">
+  <link rel="alternate" hreflang="lt" href="https://online-qr-scanner.net/lt/terms.html">
+  <link rel="alternate" hreflang="lg" href="https://online-qr-scanner.net/lg/terms.html">
+  <link rel="alternate" hreflang="lb" href="https://online-qr-scanner.net/lb/terms.html">
+  <link rel="alternate" hreflang="ms" href="https://online-qr-scanner.net/ms/terms.html">
+  <link rel="alternate" hreflang="mk" href="https://online-qr-scanner.net/mk/terms.html">
+  <link rel="alternate" hreflang="mai" href="https://online-qr-scanner.net/mai/terms.html">
+  <link rel="alternate" hreflang="mg" href="https://online-qr-scanner.net/mg/terms.html">
+  <link rel="alternate" hreflang="ml" href="https://online-qr-scanner.net/ml/terms.html">
+  <link rel="alternate" hreflang="mt" href="https://online-qr-scanner.net/mt/terms.html">
+  <link rel="alternate" hreflang="mi" href="https://online-qr-scanner.net/mi/terms.html">
+  <link rel="alternate" hreflang="mr" href="https://online-qr-scanner.net/mr/terms.html">
+  <link rel="alternate" hreflang="mni-Mtei" href="https://online-qr-scanner.net/mni-Mtei/terms.html">
+  <link rel="alternate" hreflang="lus" href="https://online-qr-scanner.net/lus/terms.html">
+  <link rel="alternate" hreflang="mn" href="https://online-qr-scanner.net/mn/terms.html">
+  <link rel="alternate" hreflang="my" href="https://online-qr-scanner.net/my/terms.html">
+  <link rel="alternate" hreflang="no" href="https://online-qr-scanner.net/no/terms.html">
+  <link rel="alternate" hreflang="ne" href="https://online-qr-scanner.net/ne/terms.html">
+  <link rel="alternate" hreflang="ru" href="https://online-qr-scanner.net/ru/terms.html">
+  <link rel="alternate" hreflang="ja" href="https://online-qr-scanner.net/ja/terms.html">
+  <link rel="alternate" hreflang="or" href="https://online-qr-scanner.net/or/terms.html">
+  <link rel="alternate" hreflang="om" href="https://online-qr-scanner.net/om/terms.html">
+  <link rel="alternate" hreflang="ps" href="https://online-qr-scanner.net/ps/terms.html">
+  <link rel="alternate" hreflang="sa" href="https://online-qr-scanner.net/sa/terms.html">
+  <link rel="alternate" hreflang="fr" href="https://online-qr-scanner.net/fr/terms.html">
+  <link rel="alternate" hreflang="fi" href="https://online-qr-scanner.net/fi/terms.html">
+  <link rel="alternate" hreflang="qu" href="https://online-qr-scanner.net/qu/terms.html">
+  <link rel="alternate" hreflang="eo" href="https://online-qr-scanner.net/eo/terms.html">
+  <link rel="alternate" hreflang="ro" href="https://online-qr-scanner.net/ro/terms.html">
+  <link rel="alternate" hreflang="sm" href="https://online-qr-scanner.net/sm/terms.html">
+  <link rel="alternate" hreflang="cs" href="https://online-qr-scanner.net/cs/terms.html">
+  <link rel="alternate" hreflang="nso" href="https://online-qr-scanner.net/nso/terms.html">
+  <link rel="alternate" hreflang="sr" href="https://online-qr-scanner.net/sr/terms.html">
+  <link rel="alternate" hreflang="st" href="https://online-qr-scanner.net/st/terms.html">
+  <link rel="alternate" hreflang="sn" href="https://online-qr-scanner.net/sn/terms.html">
+  <link rel="alternate" hreflang="sd" href="https://online-qr-scanner.net/sd/terms.html">
+  <link rel="alternate" hreflang="si" href="https://online-qr-scanner.net/si/terms.html">
+  <link rel="alternate" hreflang="sk" href="https://online-qr-scanner.net/sk/terms.html">
+  <link rel="alternate" hreflang="sl" href="https://online-qr-scanner.net/sl/terms.html">
+  <link rel="alternate" hreflang="so" href="https://online-qr-scanner.net/so/terms.html">
+  <link rel="alternate" hreflang="su" href="https://online-qr-scanner.net/su/terms.html">
+  <link rel="alternate" hreflang="sw" href="https://online-qr-scanner.net/sw/terms.html">
+  <link rel="alternate" hreflang="tg" href="https://online-qr-scanner.net/tg/terms.html">
+  <link rel="alternate" hreflang="ta" href="https://online-qr-scanner.net/ta/terms.html">
+  <link rel="alternate" hreflang="tt" href="https://online-qr-scanner.net/tt/terms.html">
+  <link rel="alternate" hreflang="es" href="https://online-qr-scanner.net/es/terms.html">
+  <link rel="alternate" hreflang="te" href="https://online-qr-scanner.net/te/terms.html">
+  <link rel="alternate" hreflang="th" href="https://online-qr-scanner.net/th/terms.html">
+  <link rel="alternate" hreflang="tr" href="https://online-qr-scanner.net/tr/terms.html">
+  <link rel="alternate" hreflang="sv" href="https://online-qr-scanner.net/sv/terms.html">
+  <link rel="alternate" hreflang="ti" href="https://online-qr-scanner.net/ti/terms.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-qr-scanner.net/zh-CN/terms.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-qr-scanner.net/zh-TW/terms.html">
+  <link rel="alternate" hreflang="ts" href="https://online-qr-scanner.net/ts/terms.html">
+  <link rel="alternate" hreflang="tk" href="https://online-qr-scanner.net/tk/terms.html">
+  <link rel="alternate" hreflang="ak" href="https://online-qr-scanner.net/ak/terms.html">
+  <link rel="alternate" hreflang="uk" href="https://online-qr-scanner.net/uk/terms.html">
+  <link rel="alternate" hreflang="ur" href="https://online-qr-scanner.net/ur/terms.html">
+  <link rel="alternate" hreflang="ug" href="https://online-qr-scanner.net/ug/terms.html">
+  <link rel="alternate" hreflang="uz" href="https://online-qr-scanner.net/uz/terms.html">
+  <link rel="alternate" hreflang="vi" href="https://online-qr-scanner.net/vi/terms.html">
+  <link rel="alternate" hreflang="cy" href="https://online-qr-scanner.net/cy/terms.html">
+  <link rel="alternate" hreflang="it" href="https://online-qr-scanner.net/it/terms.html">
+  <link rel="alternate" hreflang="yi" href="https://online-qr-scanner.net/yi/terms.html">
+  <link rel="alternate" hreflang="yo" href="https://online-qr-scanner.net/yo/terms.html">
+  <link rel="alternate" hreflang="zu" href="https://online-qr-scanner.net/zu/terms.html">
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="index.html"> <img src="/assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top">ਔਨਲਾਈਨ QR ਸਕੈਨਰ</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+     <div class="navbar-nav"> 
+      <a class="nav-link" href="index.html">ਘਰ</a> 
+      <a class="nav-link" href="about.html">ਬਾਰੇ</a> 
+      <a class="nav-link" href="privacy.html">ਪਰਾਈਵੇਟ ਨੀਤੀ</a> 
+      <a class="nav-link" href="terms.html">ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ</a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <main> 
+    <h1 style="margin-bottom: 20px;">ਵੈੱਬ ਸਾਈਟ ਨਿਯਮ ਅਤੇ ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ</h1> 
+    <p>ਔਨਲਾਈਨ-qr-scanner.net 'ਤੇ, ਅਸੀਂ ਤੁਹਾਡੇ ਸਾਡੇ ਵਿੱਚ ਭਰੋਸੇ ਅਤੇ ਤੁਹਾਡੀ ਗੋਪਨੀਯਤਾ ਦੀ ਰੱਖਿਆ ਕਰਨ ਦੀ ਸਾਡੀ ਜ਼ਿੰਮੇਵਾਰੀ ਤੋਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਜਾਣੂ ਹਾਂ। ਇਸ ਜ਼ਿੰਮੇਵਾਰੀ ਦੇ ਹਿੱਸੇ ਵਜੋਂ, ਅਸੀਂ ਤੁਹਾਡੇ ਨਾਲ ਸਾਂਝੀ ਕਰ ਰਹੇ ਹਾਂ ਕਿ ਜਦੋਂ ਤੁਸੀਂ ਸਾਡੇ ਵੈੱਬਸਾਈਟ ਵਿਸ਼ਲੇਸ਼ਣ ਟੂਲ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ ਤਾਂ ਅਸੀਂ ਕਿਹੜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰਦੇ ਹਾਂ, ਅਸੀਂ ਇਸਨੂੰ ਕਿਉਂ ਇਕੱਠਾ ਕਰਦੇ ਹਾਂ ਅਤੇ ਅਸੀਂ ਤੁਹਾਡੇ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਇਸਦੀ ਵਰਤੋਂ ਕਿਵੇਂ ਕਰਦੇ ਹਾਂ। ਔਨਲਾਈਨ-qr-scanner.net ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਸ ਬਿਆਨ ਵਿੱਚ ਵਰਣਿਤ ਡੇਟਾ ਅਭਿਆਸਾਂ ਲਈ ਸਹਿਮਤੀ ਦਿੰਦੇ ਹੋ।</p> 
+    <h2>ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ</h2> 
+    <p>ਜੇਕਰ ਤੁਸੀਂ ਸਾਡੀਆਂ ਈਮੇਲਾਂ ਜਾਂ ਨਿਊਜ਼ਲੈਟਰ ਔਨਲਾਈਨ-qr-scanner.net ਦੀ ਗਾਹਕੀ ਲੈਂਦੇ ਹੋ ਤਾਂ ਆਨਲਾਈਨ-qr-scanner.net ਅਤੇ ਇਸਦੇ ਸਹਿਯੋਗੀਆਂ ਤੋਂ ਉਪਲਬਧ ਹੋਰ ਉਤਪਾਦਾਂ ਜਾਂ ਸੇਵਾਵਾਂ ਬਾਰੇ ਤੁਹਾਨੂੰ ਸੂਚਿਤ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਪਛਾਣਨ ਯੋਗ ਈਮੇਲ ਪਤੇ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। online-qr-scanner.net ਮੌਜੂਦਾ ਸੇਵਾਵਾਂ ਜਾਂ ਸੰਭਾਵੀ ਨਵੀਆਂ ਸੇਵਾਵਾਂ ਬਾਰੇ ਤੁਹਾਡੀ ਰਾਏ ਬਾਰੇ ਖੋਜ ਕਰਨ ਲਈ ਸਰਵੇਖਣਾਂ ਰਾਹੀਂ ਵੀ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਵਿੱਚ ਰੱਖੋ ਕਿ ਜੇਕਰ ਤੁਸੀਂ ਆਨਲਾਈਨ-qr-scanner.net ਬਲੌਗ ਰਾਹੀਂ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਪਛਾਣਨ ਯੋਗ ਜਾਣਕਾਰੀ ਜਾਂ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਡੇਟਾ ਦਾ ਖੁਲਾਸਾ ਕਰਦੇ ਹੋ, ਤਾਂ ਇਹ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ ਅਤੇ ਦੂਜਿਆਂ ਦੁਆਰਾ ਵਰਤੀ ਜਾ ਸਕਦੀ ਹੈ।</p> 
+    <p>online-qr-scanner.net ਆਪਣੀਆਂ ਗਾਹਕ ਸੂਚੀਆਂ ਨੂੰ ਤੀਜੀ ਧਿਰ ਨੂੰ ਵੇਚਦਾ, ਕਿਰਾਏ 'ਤੇ ਨਹੀਂ ਦਿੰਦਾ ਜਾਂ ਲੀਜ਼ ਨਹੀਂ ਦਿੰਦਾ। online-qr-scanner.net, ਸਮੇਂ-ਸਮੇਂ 'ਤੇ, ਕਿਸੇ ਖਾਸ ਪੇਸ਼ਕਸ਼ ਬਾਰੇ ਬਾਹਰੀ ਵਪਾਰਕ ਭਾਈਵਾਲਾਂ ਦੀ ਤਰਫੋਂ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦਾ ਹੈ ਜੋ ਤੁਹਾਡੀ ਦਿਲਚਸਪੀ ਦੀ ਹੋ ਸਕਦੀ ਹੈ। ਉਹਨਾਂ ਮਾਮਲਿਆਂ ਵਿੱਚ, ਤੁਹਾਡੀ ਵਿਲੱਖਣ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਪਛਾਣਯੋਗ ਜਾਣਕਾਰੀ (ਈ-ਮੇਲ, ਨਾਮ, ਪਤਾ, ਟੈਲੀਫੋਨ ਨੰਬਰ) ਤੀਜੀ ਧਿਰ ਨੂੰ ਟ੍ਰਾਂਸਫਰ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ। ਇਸ ਤੋਂ ਇਲਾਵਾ, online-qr-scanner.net ਅੰਕੜਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ, ਤੁਹਾਨੂੰ ਈਮੇਲ ਜਾਂ ਡਾਕ ਮੇਲ ਭੇਜਣ, ਗਾਹਕ ਸਹਾਇਤਾ ਪ੍ਰਦਾਨ ਕਰਨ, ਜਾਂ ਡਿਲੀਵਰੀ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਭਰੋਸੇਯੋਗ ਭਾਈਵਾਲਾਂ ਨਾਲ ਡੇਟਾ ਸਾਂਝਾ ਕਰ ਸਕਦਾ ਹੈ। ਅਜਿਹੀਆਂ ਤੀਜੀਆਂ ਧਿਰਾਂ ਨੂੰ ਔਨਲਾਈਨ-qr-scanner.net ਨੂੰ ਇਹ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨ ਤੋਂ ਇਲਾਵਾ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਮਨਾਹੀ ਹੈ, ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਦੀ ਗੁਪਤਤਾ ਬਣਾਈ ਰੱਖਣ ਦੀ ਲੋੜ ਹੈ।</p> 
+    <p>online-qr-scanner.net ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦਾ ਖੁਲਾਸਾ ਕਰੇਗਾ, ਬਿਨਾਂ ਨੋਟਿਸ ਦੇ, ਸਿਰਫ ਤਾਂ ਹੀ ਜੇ ਕਾਨੂੰਨ ਦੁਆਰਾ ਜਾਂ ਨੇਕ ਵਿਸ਼ਵਾਸ ਵਿੱਚ ਅਜਿਹਾ ਕਰਨ ਦੀ ਲੋੜ ਹੈ ਕਿ ਅਜਿਹੀ ਕਾਰਵਾਈ ਜ਼ਰੂਰੀ ਹੈ: (a) ਕਾਨੂੰਨ ਦੇ ਹੁਕਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨਾ ਜਾਂ ਇਹਨਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨਾ ਔਨਲਾਈਨ-qr-scanner.net ਜਾਂ ਸਾਈਟ 'ਤੇ ਦਿੱਤੀ ਜਾਂਦੀ ਕਾਨੂੰਨੀ ਪ੍ਰਕਿਰਿਆ; (b) ਔਨਲਾਈਨ-qr-scanner.net (ਇਸ ਸਮਝੌਤੇ ਨੂੰ ਲਾਗੂ ਕਰਨ ਸਮੇਤ) ਦੇ ਅਧਿਕਾਰਾਂ ਜਾਂ ਸੰਪਤੀ ਦੀ ਰੱਖਿਆ ਅਤੇ ਰੱਖਿਆ ਕਰੋ; ਅਤੇ, (c) ਔਨਲਾਈਨ-qr-scanner.net ਦੇ ਉਪਭੋਗਤਾਵਾਂ, ਜਾਂ ਜਨਤਾ ਦੀ ਨਿੱਜੀ ਸੁਰੱਖਿਆ ਦੀ ਰੱਖਿਆ ਕਰਨ ਲਈ ਜ਼ਰੂਰੀ ਹਾਲਾਤਾਂ ਵਿੱਚ ਕੰਮ ਕਰੋ।</p> 
+    <h2>ਜਾਣਕਾਰੀ ਸੰਗ੍ਰਹਿ</h2> 
+    <p>ਔਨਲਾਈਨ-qr-scanner.net ਟੂਲ ਦੁਆਰਾ ਇਕੱਤਰ ਕੀਤੇ ਸਾਰੇ ਡੇਟਾ ਨੂੰ ਜਨਤਕ ਤੌਰ 'ਤੇ ਔਨਲਾਈਨ ਉਪਲਬਧ ਕਈ ਹੋਰ ਤਰੀਕਿਆਂ ਦੁਆਰਾ ਹੱਥੀਂ ਐਕਸੈਸ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ (Whois Lookup, Google ਕੈਸ਼ਡ ਪੰਨੇ, ਆਦਿ)। ਇਸ ਲਈ ਆਨਲਾਈਨ-qr-scanner.net 'ਤੇ ਤਿਆਰ ਕੀਤੀ ਹਰ ਇੱਕ ਰਿਪੋਰਟ ਨੂੰ 'ਜਨਤਕ' ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਸ ਤਰ੍ਹਾਂ ਸਾਡੇ ਡੇਟਾਬੇਸ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਇਸ ਨੂੰ ਖੋਜ ਇੰਜਣਾਂ ਦੁਆਰਾ ਸੂਚੀਬੱਧ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ. online-qr-scanner.net ਆਪਣੇ ਵੈੱਬਸਾਈਟ ਵਿਸ਼ਲੇਸ਼ਣ ਟੂਲ ਨੂੰ ਚਲਾਉਣ ਅਤੇ ਤੁਹਾਡੇ ਦੁਆਰਾ ਬੇਨਤੀ ਕੀਤੀਆਂ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਵੈੱਬਸਾਈਟ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰਦਾ ਹੈ ਅਤੇ ਵਰਤਦਾ ਹੈ। ਇਸ ਜਾਣਕਾਰੀ ਵਿੱਚ ਇਹ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ: IP ਪਤਾ, ਡੋਮੇਨ ਨਾਮ, ਅਨੁਮਾਨਿਤ ਵਿਜ਼ਿਟਰ, ਇਨ-ਸਾਈਟ ਅਤੇ ਆਫ-ਸਾਈਟ ਐਸਈਓ ਵਿਸ਼ਲੇਸ਼ਣ, ਉਪਯੋਗਤਾ, ਐਕਸੈਸ ਟਾਈਮ ਅਤੇ ਰੈਫਰਿੰਗ ਵੈੱਬਸਾਈਟ ਪਤੇ। ਇਸ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ online-qr-scanner.net ਦੁਆਰਾ ਆਪਣੀ ਸੇਵਾ ਦੇ ਸੰਚਾਲਨ ਲਈ ਅਤੇ ਔਨਲਾਈਨ-qr-scanner.net ਵੈੱਬ ਟੂਲ ਦੀ ਵਰਤੋਂ ਸੰਬੰਧੀ ਆਮ ਅੰਕੜੇ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।</p> 
+    <h2>ਪਾਬੰਦੀਆਂ</h2> 
+    <h3>ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਕਿ ਤੁਸੀਂ ਇਹ ਨਹੀਂ ਕਰੋਗੇ:</h3> 
+    <ul> 
+     <li>ਕਿਸੇ ਵੀ ਉਦੇਸ਼ ਲਈ ਸਮੱਗਰੀ ਨੂੰ ਵੰਡੋ ਜਿਸ ਵਿੱਚ ਬਿਨਾਂ ਕਿਸੇ ਅੰਦਰੂਨੀ ਡੇਟਾਬੇਸ ਨੂੰ ਸੰਕਲਿਤ ਕਰਨਾ, ਪ੍ਰੈਸ ਜਾਂ ਮੀਡੀਆ ਦੁਆਰਾ ਜਾਂ ਕਿਸੇ ਵਪਾਰਕ ਨੈਟਵਰਕ, ਕੇਬਲ ਜਾਂ ਸੈਟੇਲਾਈਟ ਸਿਸਟਮ ਦੁਆਰਾ ਸਮੱਗਰੀ ਦੀ ਮੁੜ ਵੰਡ ਜਾਂ ਪ੍ਰਜਨਨ ਸ਼ਾਮਲ ਹੈ।</li> 
+     <li>ਦੇ ਡੈਰੀਵੇਟਿਵ ਕੰਮ ਬਣਾਓ, ਰਿਵਰਸ ਇੰਜੀਨੀਅਰ, ਡੀਕੰਪਾਈਲ, ਡਿਸਸੈਂਬਲ, ਅਨੁਕੂਲਿਤ, ਅਨੁਵਾਦ, ਪ੍ਰਸਾਰਿਤ, ਪ੍ਰਬੰਧ, ਸੋਧ, ਕਾਪੀ, ਬੰਡਲ, ਵੇਚਣ, ਉਪ-ਲਾਇਸੈਂਸ, ਨਿਰਯਾਤ, ਅਭੇਦ, ਟ੍ਰਾਂਸਫਰ, ਅਨੁਕੂਲਤਾ, ਕਰਜ਼ਾ, ਕਿਰਾਏ, ਲੀਜ਼, ਨਿਰਧਾਰਤ, ਸ਼ੇਅਰ, ਆਊਟਸੋਰਸ, ਹੋਸਟ, ਪ੍ਰਕਾਸ਼ਿਤ, ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਉਪਲਬਧ ਕਰਾਉਣਾ ਜਾਂ ਕਿਸੇ ਹੋਰ ਤਰੀਕੇ ਨਾਲ, ਸਿੱਧੇ ਜਾਂ ਅਸਿੱਧੇ ਤੌਰ 'ਤੇ, ਸਮਗਰੀ/ਟੂਲ ਨੂੰ ਪੂਰੇ ਜਾਂ ਅੰਸ਼ਕ ਰੂਪ ਵਿੱਚ, ਕਿਸੇ ਵੀ ਰੂਪ ਵਿੱਚ ਜਾਂ ਕਿਸੇ ਵੀ ਤਰੀਕੇ ਨਾਲ, ਭਾਵੇਂ ਉਹ ਭੌਤਿਕ, ਇਲੈਕਟ੍ਰਾਨਿਕ ਜਾਂ ਹੋਰ ਕਿਸੇ ਵੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤੋ।</li> 
+     <li>ਕਿਸੇ ਵੀ ਚੀਜ਼ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਇਜਾਜ਼ਤ ਦਿਓ ਜਾਂ ਅਜਿਹਾ ਕਰੋ ਜੋ ਕੰਪਨੀ ਜਾਂ ਇਸਦੇ ਲਾਇਸੈਂਸ ਦੇਣ ਵਾਲੇ ਦੇ ਮਲਕੀਅਤ ਅਧਿਕਾਰਾਂ ਦੀ ਉਲੰਘਣਾ ਜਾਂ ਪੱਖਪਾਤ ਕਰੇ ਜਾਂ ਕਿਸੇ ਤੀਜੀ-ਧਿਰ ਨੂੰ ਸਮੱਗਰੀ/ਟੂਲਸ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦੇਵੇ। ਇਸ ਇਕਰਾਰਨਾਮੇ ਵਿੱਚ ਨਿਰਧਾਰਤ ਪਾਬੰਦੀਆਂ ਸੀਮਤ ਹੱਦ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਣਗੀਆਂ ਪਾਬੰਦੀਆਂ ਲਾਗੂ ਕਾਨੂੰਨ ਦੀ ਮਨਾਹੀ ਹਨ।</li> 
+     <li>ਔਫਲਾਈਨ ਦੇਖਣ ਸਮੇਤ ਕਿਸੇ ਵੀ ਵਰਤੋਂ ਲਈ ਵੈੱਬਸਾਈਟ ਤੋਂ ਕਈ ਪੰਨਿਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਸਵੈਚਲਿਤ ਵੈੱਬਸਾਈਟ ਹਾਸਲ ਕਰਨ ਵਾਲੇ ਸੌਫਟਵੇਅਰ (ਜਿਸ ਨੂੰ ਵੈੱਬਸਾਈਟ ਡਾਊਨਲੋਡਰ ਜਾਂ ਵੈੱਬਸਾਈਟ ਕਾਪੀਰ ਸੌਫਟਵੇਅਰ ਵੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ) ਦੀ ਵਰਤੋਂ ਜਾਂ ਵਰਤੋਂ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</li> 
+     <li>ਬੋਟਸ ਦੀ ਵਰਤੋਂ ਕਰੋ.</li> 
+     <li>ਵੈੱਬਸਾਈਟ ਤੋਂ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਲੋਡ ਕਰਨ ਅਤੇ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਨ ਤੋਂ ਰੋਕਣ ਲਈ ਇਸ਼ਤਿਹਾਰ ਬਲਾਕਿੰਗ ਸੌਫਟਵੇਅਰ ਦੀ ਵਰਤੋਂ ਕਰੋ।</li> 
+    </ul> 
+    <h2>ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਦੀ ਸੁਰੱਖਿਆ</h2> 
+    <p>ਜਾਣਕਾਰੀ ਦੀ ਸੁਰੱਖਿਆ ਦਾ ਕੋਈ ਤਰੀਕਾ 100% ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ। online-qr-scanner.net ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨੂੰ ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ, ਵਰਤੋਂ ਜਾਂ ਖੁਲਾਸੇ ਤੋਂ ਬਚਾਉਣ ਵਿੱਚ ਮਦਦ ਲਈ ਕਈ ਤਰ੍ਹਾਂ ਦੀਆਂ ਸੁਰੱਖਿਆ ਤਕਨੀਕਾਂ ਅਤੇ ਪ੍ਰਕਿਰਿਆਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ। online-qr-scanner.net ਤੁਹਾਡੇ ਦੁਆਰਾ ਕੰਪਿਊਟਰ ਸਰਵਰਾਂ 'ਤੇ ਪ੍ਰਦਾਨ ਕੀਤੀ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਪਛਾਣਯੋਗ ਜਾਣਕਾਰੀ ਨੂੰ ਇੱਕ ਨਿਯੰਤਰਿਤ, ਸੁਰੱਖਿਅਤ ਵਾਤਾਵਰਣ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਕਰਦਾ ਹੈ, ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ, ਵਰਤੋਂ ਜਾਂ ਖੁਲਾਸੇ ਤੋਂ ਸੁਰੱਖਿਅਤ ਹੈ। ਜਦੋਂ ਨਿੱਜੀ ਜਾਣਕਾਰੀ (ਜਿਵੇਂ ਕਿ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਨੰਬਰ) ਦੂਜੀਆਂ ਵੈੱਬਸਾਈਟਾਂ 'ਤੇ ਪ੍ਰਸਾਰਿਤ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਇਹ ਏਨਕ੍ਰਿਪਸ਼ਨ ਦੀ ਵਰਤੋਂ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਜਿਵੇਂ ਕਿ ਸਕਿਓਰ ਸਾਕਟ ਲੇਅਰ (SSL) ਪ੍ਰੋਟੋਕੋਲ।</p> 
+    <h2>ਇਸ ਕਥਨ ਵਿੱਚ ਬਦਲਾਅ</h2> 
+    <p>online-qr-scanner.net ਕੰਪਨੀ ਅਤੇ ਗਾਹਕ ਫੀਡਬੈਕ ਨੂੰ ਦਰਸਾਉਣ ਲਈ ਕਦੇ-ਕਦਾਈਂ ਇਸ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਨੂੰ ਅਪਡੇਟ ਕਰੇਗਾ। online-qr-scanner.net ਤੁਹਾਨੂੰ ਸਮੇਂ-ਸਮੇਂ 'ਤੇ ਇਸ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਲਈ ਉਤਸ਼ਾਹਿਤ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਇਹ ਸੂਚਿਤ ਕੀਤਾ ਜਾ ਸਕੇ ਕਿ online-qr-scanner.net ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਦੀ ਸੁਰੱਖਿਆ ਕਿਵੇਂ ਕਰ ਰਿਹਾ ਹੈ। ਜਦੋਂ ਅਜਿਹੀ ਤਬਦੀਲੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਅਸੀਂ ਹੇਠਾਂ "ਆਖਰੀ ਅੱਪਡੇਟ ਕੀਤੀ" ਮਿਤੀ ਨੂੰ ਅੱਪਡੇਟ ਕਰਾਂਗੇ। ਇਸ ਔਨਲਾਈਨ-qr-scanner.net ਵੈੱਬਸਾਈਟ ਦੀ ਵਰਤੋਂ ਇਹਨਾਂ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੀ ਤੁਹਾਡੀ ਸਵੀਕ੍ਰਿਤੀ ਨੂੰ ਦਰਸਾਉਂਦੀ ਹੈ।</p> 
+   </main> 
+  </div> 
+  <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start"> 
+   <div class="container"> 
+    <p class="mb-0" not-translate>© 2022 Online QR Scanner.</p> 
+   </div> 
+  </footer>   
+ </body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="sm">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="mobile-web-app-capable" content="yes"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <title>Tu'utu'uga o le fa'aoga - Fa'ainitaneti QR Code Scanner</title> 
+  <meta name="description" content="QR Code Scanner o se su'esu'e i luga ole laiga ma ole su'ega QR code i luga ole laiga sili ona vave ma sili ona aoga mo le fa'ailoaina o QR code. Su'ega maualuga-saosaoa, Leai se mana'omia e fa'apipi'i, Fa'ata'ita'i fa'ata."> 
+  <meta name="keywords" content="web qrcode, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, how to scan qr code, how do i scan qr code, scan the qr code, scan app, how scan qr code, how to scan a qr code, google qr code, free qr code scanner, qr code scannen, scan a qr code,qrcode web, web qr, qr scanner, qr code scanner, qr code scan, online qr code scanner, qr code reader, scanner, scan, faʻafefea ona suʻeina le qr code, faʻafefea ona ou suʻeina le qr code, faʻataʻitaʻi le qr code, faʻaoga app , fa'afefea ona su'e le qr code, fa'afefea ona su'e le qr code, google qr code, free qr code scanner, qr code scannen, su'esu'e le qr code"> 
+  <meta property="og:description" content="QR Code Scanner is an online scanner and the fastest and most practical online QR code scanner for identifying QR codes."> 
+  <meta property="og:title" content="Tu'utu'uga o le fa'aoga - Fa'ainitaneti QR Code Scanner"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png"> 
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script> 
+  <style>
+		.bd-footer {
+			font-size: .875rem;
+			color: #63707c
+		}
+
+		.bd-footer a {
+			font-weight: 600;
+			color: #495057
+		}
+
+		.bd-footer a:hover,.bd-footer a:focus {
+			color: #0d6efd
+		}
+		
+		.form-control {
+			border-radius: 0px;
+		}
+	</style> 
+  <!-- Google tag (gtag.js) --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJEL5R367D"></script> 
+  <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-HJEL5R367D');
+	</script> 
+  <link rel="alternate" hreflang="sm" href="https://online-qr-scanner.net/sm/terms.html">
+  <link rel="alternate" hreflang="ar" href="https://online-qr-scanner.net/ar/terms.html">
+  <link rel="alternate" hreflang="sq" href="https://online-qr-scanner.net/sq/terms.html">
+  <link rel="alternate" hreflang="am" href="https://online-qr-scanner.net/am/terms.html">
+  <link rel="alternate" hreflang="en" href="https://online-qr-scanner.net/terms.html">
+  <link rel="alternate" hreflang="hy" href="https://online-qr-scanner.net/hy/terms.html">
+  <link rel="alternate" hreflang="as" href="https://online-qr-scanner.net/as/terms.html">
+  <link rel="alternate" hreflang="ay" href="https://online-qr-scanner.net/ay/terms.html">
+  <link rel="alternate" hreflang="az" href="https://online-qr-scanner.net/az/terms.html">
+  <link rel="alternate" hreflang="pl" href="https://online-qr-scanner.net/pl/terms.html">
+  <link rel="alternate" hreflang="fa" href="https://online-qr-scanner.net/fa/terms.html">
+  <link rel="alternate" hreflang="bm" href="https://online-qr-scanner.net/bm/terms.html">
+  <link rel="alternate" hreflang="xh" href="https://online-qr-scanner.net/xh/terms.html">
+  <link rel="alternate" hreflang="eu" href="https://online-qr-scanner.net/eu/terms.html">
+  <link rel="alternate" hreflang="be" href="https://online-qr-scanner.net/be/terms.html">
+  <link rel="alternate" hreflang="bn" href="https://online-qr-scanner.net/bn/terms.html">
+  <link rel="alternate" hreflang="bho" href="https://online-qr-scanner.net/bho/terms.html">
+  <link rel="alternate" hreflang="bs" href="https://online-qr-scanner.net/bs/terms.html">
+  <link rel="alternate" hreflang="pt" href="https://online-qr-scanner.net/pt/terms.html">
+  <link rel="alternate" hreflang="bg" href="https://online-qr-scanner.net/bg/terms.html">
+  <link rel="alternate" hreflang="ca" href="https://online-qr-scanner.net/ca/terms.html">
+  <link rel="alternate" hreflang="ceb" href="https://online-qr-scanner.net/ceb/terms.html">
+  <link rel="alternate" hreflang="ny" href="https://online-qr-scanner.net/ny/terms.html">
+  <link rel="alternate" hreflang="co" href="https://online-qr-scanner.net/co/terms.html">
+  <link rel="alternate" hreflang="ht" href="https://online-qr-scanner.net/ht/terms.html">
+  <link rel="alternate" hreflang="hr" href="https://online-qr-scanner.net/hr/terms.html">
+  <link rel="alternate" hreflang="dv" href="https://online-qr-scanner.net/dv/terms.html">
+  <link rel="alternate" hreflang="iw" href="https://online-qr-scanner.net/iw/terms.html">
+  <link rel="alternate" hreflang="doi" href="https://online-qr-scanner.net/doi/terms.html">
+  <link rel="alternate" hreflang="da" href="https://online-qr-scanner.net/da/terms.html">
+  <link rel="alternate" hreflang="de" href="https://online-qr-scanner.net/de/terms.html">
+  <link rel="alternate" hreflang="et" href="https://online-qr-scanner.net/et/terms.html">
+  <link rel="alternate" hreflang="ee" href="https://online-qr-scanner.net/ee/terms.html">
+  <link rel="alternate" hreflang="tl" href="https://online-qr-scanner.net/tl/terms.html">
+  <link rel="alternate" hreflang="fy" href="https://online-qr-scanner.net/fy/terms.html">
+  <link rel="alternate" hreflang="gd" href="https://online-qr-scanner.net/gd/terms.html">
+  <link rel="alternate" hreflang="gl" href="https://online-qr-scanner.net/gl/terms.html">
+  <link rel="alternate" hreflang="ka" href="https://online-qr-scanner.net/ka/terms.html">
+  <link rel="alternate" hreflang="gn" href="https://online-qr-scanner.net/gn/terms.html">
+  <link rel="alternate" hreflang="gu" href="https://online-qr-scanner.net/gu/terms.html">
+  <link rel="alternate" hreflang="nl" href="https://online-qr-scanner.net/nl/terms.html">
+  <link rel="alternate" hreflang="af" href="https://online-qr-scanner.net/af/terms.html">
+  <link rel="alternate" hreflang="ko" href="https://online-qr-scanner.net/ko/terms.html">
+  <link rel="alternate" hreflang="ha" href="https://online-qr-scanner.net/ha/terms.html">
+  <link rel="alternate" hreflang="haw" href="https://online-qr-scanner.net/haw/terms.html">
+  <link rel="alternate" hreflang="hi" href="https://online-qr-scanner.net/hi/terms.html">
+  <link rel="alternate" hreflang="hmn" href="https://online-qr-scanner.net/hmn/terms.html">
+  <link rel="alternate" hreflang="hu" href="https://online-qr-scanner.net/hu/terms.html">
+  <link rel="alternate" hreflang="el" href="https://online-qr-scanner.net/el/terms.html">
+  <link rel="alternate" hreflang="is" href="https://online-qr-scanner.net/is/terms.html">
+  <link rel="alternate" hreflang="ig" href="https://online-qr-scanner.net/ig/terms.html">
+  <link rel="alternate" hreflang="ilo" href="https://online-qr-scanner.net/ilo/terms.html">
+  <link rel="alternate" hreflang="id" href="https://online-qr-scanner.net/id/terms.html">
+  <link rel="alternate" hreflang="ga" href="https://online-qr-scanner.net/ga/terms.html">
+  <link rel="alternate" hreflang="jw" href="https://online-qr-scanner.net/jw/terms.html">
+  <link rel="alternate" hreflang="kn" href="https://online-qr-scanner.net/kn/terms.html">
+  <link rel="alternate" hreflang="kk" href="https://online-qr-scanner.net/kk/terms.html">
+  <link rel="alternate" hreflang="km" href="https://online-qr-scanner.net/km/terms.html">
+  <link rel="alternate" hreflang="rw" href="https://online-qr-scanner.net/rw/terms.html">
+  <link rel="alternate" hreflang="gom" href="https://online-qr-scanner.net/gom/terms.html">
+  <link rel="alternate" hreflang="kri" href="https://online-qr-scanner.net/kri/terms.html">
+  <link rel="alternate" hreflang="ku" href="https://online-qr-scanner.net/ku/terms.html">
+  <link rel="alternate" hreflang="ckb" href="https://online-qr-scanner.net/ckb/terms.html">
+  <link rel="alternate" hreflang="ky" href="https://online-qr-scanner.net/ky/terms.html">
+  <link rel="alternate" hreflang="lo" href="https://online-qr-scanner.net/lo/terms.html">
+  <link rel="alternate" hreflang="la" href="https://online-qr-scanner.net/la/terms.html">
+  <link rel="alternate" hreflang="lv" href="https://online-qr-scanner.net/lv/terms.html">
+  <link rel="alternate" hreflang="ln" href="https://online-qr-scanner.net/ln/terms.html">
+  <link rel="alternate" hreflang="lt" href="https://online-qr-scanner.net/lt/terms.html">
+  <link rel="alternate" hreflang="lg" href="https://online-qr-scanner.net/lg/terms.html">
+  <link rel="alternate" hreflang="lb" href="https://online-qr-scanner.net/lb/terms.html">
+  <link rel="alternate" hreflang="ms" href="https://online-qr-scanner.net/ms/terms.html">
+  <link rel="alternate" hreflang="mk" href="https://online-qr-scanner.net/mk/terms.html">
+  <link rel="alternate" hreflang="mai" href="https://online-qr-scanner.net/mai/terms.html">
+  <link rel="alternate" hreflang="mg" href="https://online-qr-scanner.net/mg/terms.html">
+  <link rel="alternate" hreflang="ml" href="https://online-qr-scanner.net/ml/terms.html">
+  <link rel="alternate" hreflang="mt" href="https://online-qr-scanner.net/mt/terms.html">
+  <link rel="alternate" hreflang="mi" href="https://online-qr-scanner.net/mi/terms.html">
+  <link rel="alternate" hreflang="mr" href="https://online-qr-scanner.net/mr/terms.html">
+  <link rel="alternate" hreflang="mni-Mtei" href="https://online-qr-scanner.net/mni-Mtei/terms.html">
+  <link rel="alternate" hreflang="lus" href="https://online-qr-scanner.net/lus/terms.html">
+  <link rel="alternate" hreflang="mn" href="https://online-qr-scanner.net/mn/terms.html">
+  <link rel="alternate" hreflang="my" href="https://online-qr-scanner.net/my/terms.html">
+  <link rel="alternate" hreflang="no" href="https://online-qr-scanner.net/no/terms.html">
+  <link rel="alternate" hreflang="ne" href="https://online-qr-scanner.net/ne/terms.html">
+  <link rel="alternate" hreflang="ru" href="https://online-qr-scanner.net/ru/terms.html">
+  <link rel="alternate" hreflang="ja" href="https://online-qr-scanner.net/ja/terms.html">
+  <link rel="alternate" hreflang="or" href="https://online-qr-scanner.net/or/terms.html">
+  <link rel="alternate" hreflang="om" href="https://online-qr-scanner.net/om/terms.html">
+  <link rel="alternate" hreflang="ps" href="https://online-qr-scanner.net/ps/terms.html">
+  <link rel="alternate" hreflang="sa" href="https://online-qr-scanner.net/sa/terms.html">
+  <link rel="alternate" hreflang="fr" href="https://online-qr-scanner.net/fr/terms.html">
+  <link rel="alternate" hreflang="fi" href="https://online-qr-scanner.net/fi/terms.html">
+  <link rel="alternate" hreflang="pa" href="https://online-qr-scanner.net/pa/terms.html">
+  <link rel="alternate" hreflang="qu" href="https://online-qr-scanner.net/qu/terms.html">
+  <link rel="alternate" hreflang="eo" href="https://online-qr-scanner.net/eo/terms.html">
+  <link rel="alternate" hreflang="ro" href="https://online-qr-scanner.net/ro/terms.html">
+  <link rel="alternate" hreflang="cs" href="https://online-qr-scanner.net/cs/terms.html">
+  <link rel="alternate" hreflang="nso" href="https://online-qr-scanner.net/nso/terms.html">
+  <link rel="alternate" hreflang="sr" href="https://online-qr-scanner.net/sr/terms.html">
+  <link rel="alternate" hreflang="st" href="https://online-qr-scanner.net/st/terms.html">
+  <link rel="alternate" hreflang="sn" href="https://online-qr-scanner.net/sn/terms.html">
+  <link rel="alternate" hreflang="sd" href="https://online-qr-scanner.net/sd/terms.html">
+  <link rel="alternate" hreflang="si" href="https://online-qr-scanner.net/si/terms.html">
+  <link rel="alternate" hreflang="sk" href="https://online-qr-scanner.net/sk/terms.html">
+  <link rel="alternate" hreflang="sl" href="https://online-qr-scanner.net/sl/terms.html">
+  <link rel="alternate" hreflang="so" href="https://online-qr-scanner.net/so/terms.html">
+  <link rel="alternate" hreflang="su" href="https://online-qr-scanner.net/su/terms.html">
+  <link rel="alternate" hreflang="sw" href="https://online-qr-scanner.net/sw/terms.html">
+  <link rel="alternate" hreflang="tg" href="https://online-qr-scanner.net/tg/terms.html">
+  <link rel="alternate" hreflang="ta" href="https://online-qr-scanner.net/ta/terms.html">
+  <link rel="alternate" hreflang="tt" href="https://online-qr-scanner.net/tt/terms.html">
+  <link rel="alternate" hreflang="es" href="https://online-qr-scanner.net/es/terms.html">
+  <link rel="alternate" hreflang="te" href="https://online-qr-scanner.net/te/terms.html">
+  <link rel="alternate" hreflang="th" href="https://online-qr-scanner.net/th/terms.html">
+  <link rel="alternate" hreflang="tr" href="https://online-qr-scanner.net/tr/terms.html">
+  <link rel="alternate" hreflang="sv" href="https://online-qr-scanner.net/sv/terms.html">
+  <link rel="alternate" hreflang="ti" href="https://online-qr-scanner.net/ti/terms.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://online-qr-scanner.net/zh-CN/terms.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://online-qr-scanner.net/zh-TW/terms.html">
+  <link rel="alternate" hreflang="ts" href="https://online-qr-scanner.net/ts/terms.html">
+  <link rel="alternate" hreflang="tk" href="https://online-qr-scanner.net/tk/terms.html">
+  <link rel="alternate" hreflang="ak" href="https://online-qr-scanner.net/ak/terms.html">
+  <link rel="alternate" hreflang="uk" href="https://online-qr-scanner.net/uk/terms.html">
+  <link rel="alternate" hreflang="ur" href="https://online-qr-scanner.net/ur/terms.html">
+  <link rel="alternate" hreflang="ug" href="https://online-qr-scanner.net/ug/terms.html">
+  <link rel="alternate" hreflang="uz" href="https://online-qr-scanner.net/uz/terms.html">
+  <link rel="alternate" hreflang="vi" href="https://online-qr-scanner.net/vi/terms.html">
+  <link rel="alternate" hreflang="cy" href="https://online-qr-scanner.net/cy/terms.html">
+  <link rel="alternate" hreflang="it" href="https://online-qr-scanner.net/it/terms.html">
+  <link rel="alternate" hreflang="yi" href="https://online-qr-scanner.net/yi/terms.html">
+  <link rel="alternate" hreflang="yo" href="https://online-qr-scanner.net/yo/terms.html">
+  <link rel="alternate" hreflang="zu" href="https://online-qr-scanner.net/zu/terms.html">
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="index.html"> <img src="/assets/img/favicon-32x32.png" alt="" width="30" height="24" class="d-inline-block align-top">Online QR Scanner</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+     <div class="navbar-nav"> 
+      <a class="nav-link" href="index.html">Aiga</a> 
+      <a class="nav-link" href="about.html">E uiga i</a> 
+      <a class="nav-link" href="privacy.html">Fa'alilolilo &amp; Faiga Fa'avae</a> 
+      <a class="nav-link" href="terms.html">Tulaga o le faaaogaina</a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <div class="container"> 
+   <main> 
+    <h1 style="margin-bottom: 20px;">Upega Tafa'ilagi Tuutuuga ma Tulaga o Fa'aoga</h1> 
+    <p>I luga o le online-qr-scanner.net, matou te matua nofouta i le faʻatuatuaina o loʻo e tuʻuina mai ia i matou ma la matou matafaioi e puipuia lou le faalauaiteleina. I le avea ai o se vaega o lenei matafaioi, matou te faʻasoa atu ia te oe faʻamatalaga matou te aoina pe a e faʻaogaina la matou upega tafaʻilagi auʻiliʻili meafaigaluega, aisea matou te aoina ai ma pe faʻapefea ona matou faʻaogaina e faʻaleleia ai lou poto masani. I le fa'aogaina o le online-qr-scanner.net, ua e malie i fa'amatalaga fa'amatalaga o lo'o fa'amatalaina i lenei fa'amatalaga.</p> 
+    <h2>Fa'aaogāina o Fa'amatalaga Patino</h2> 
+    <p>Afai e te lesitala i a matou imeli poʻo nusipepa i luga ole laiga-qr-scanner.net e mafai ona faʻaogaina lau tuatusi imeli e faʻaalia ai oe e faʻailoa atu ia te oe isi oloa poʻo auaunaga o loʻo maua mai luga ole initaneti-qr-scanner.net ma ana paaga. E mafai fo'i ona fa'afeso'ota'i oe e le online-qr-scanner.net e ala i su'esu'ega e fai ai su'esu'ega e uiga i lou manatu i au'aunaga o lo'o i ai nei po'o ni au'aunaga fou. Faamolemole ia manatua afai e te faʻaalia saʻo faʻamatalaga e iloagofie ai oe poʻo faʻamatalaga maaleale patino e ala i luga ole blog-qr-scanner.net blog, e mafai ona aoina ma faʻaaogaina e isi.</p> 
+    <p>online-qr-scanner.net e le fa'atau atu, lisiina pe lisiina ana lisi o tagata fa'atau i isi vaega. online-qr-scanner.net e mafai, mai lea taimi i lea taimi, ona faʻafesoʻotaʻi oe e fai ma sui o paaga pisinisi mai fafo e uiga i se ofo faʻapitoa atonu e te fiafia i ai. I na tulaga, o au faʻamatalaga faʻapitoa e iloagofie ai oe (i-meli, igoa, tuatusi, numera telefoni) e le faʻafeiloaʻi i le isi vaega. E le gata i lea, e mafai e le online-qr-scanner.net ona fa'asoa fa'amatalaga ma pa'aga fa'atuatuaina e fesoasoani ia i matou i le fa'atinoina o su'esu'ega fa'afuainumera, lafo atu ia oe imeli po'o meli meli, tu'uina atu le lagolago a tagata fa'atau, po'o le fa'atulagaina o tiliva. O ia vaega lona tolu e faʻasaina mai le faʻaogaina o au faʻamatalaga patino sei vagana ai le tuʻuina atu o nei auʻaunaga i luga ole initaneti-qr-scanner.net, ma e manaʻomia ona latou tausia le le faalauaiteleina o au faʻamatalaga.</p> 
+    <p>online-qr-scanner.net o le a faʻaalia au faʻamatalaga patino, e aunoa ma se faʻasilasilaga, pe afai e manaʻomia e le tulafono poʻo i le talitonuga lelei e manaʻomia sea gaioiga e: (a) tausisia tulafono a le tulafono pe tausisia faiga fa'aletulafono na tu'uina atu ile initaneti-qr-scanner.net po'o le nofoaga; (b) puipuia ma puipuia aia tatau po o meatotino a le online-qr-scanner.net (e aofia ai le faamalosia o lenei maliega); ma, (c) galue i lalo o ni tulaga fa'alavelave e puipuia ai le saogalemu o le tagata lava ia o lo'o fa'aogaina le initaneti-qr-scanner.net, po'o tagata lautele.</p> 
+    <h2>Aoina o Fa'amatalaga</h2> 
+    <p>O fa'amaumauga uma e aoina e le meafaigaluega i luga o le initaneti-qr-scanner.net e mafai ona maua ma le lima i le tele o isi auala o lo'o avanoa lautele i luga o le initaneti (Whois Lookup, Google Cached Pages, ma isi). O le mafuaaga lena o lipoti taʻitasi uma na faia i luga o le initaneti-qr-scanner.net ua taʻua 'lautele' ma o loʻo teuina i totonu o la matou faʻamaumauga. E le gata i lea, e mafai ona fa'asinoina e masini su'esu'e. online-qr-scanner.net aoina ma fa'aoga fa'amatalaga i luga o le upega tafa'ilagi e fa'agaioi ai lana meafaigaluega au'ili'ili i luga ole laiga ma tu'uina atu au'aunaga na e talosagaina. O lenei faʻamatalaga e mafai ona aofia ai: tuatusi IP, igoa ole igoa, tagata asiasi faʻatatau, suʻesuʻega SEO i totonu ma fafo, faʻaogaina, taimi avanoa ma faʻasino tuatusi upega tafaʻilagi. O lenei fa'amatalaga e fa'aogaina e luga o le initaneti-qr-scanner.net mo le fa'agaioiga o lana tautua ma tu'uina atu fa'amaumauga lautele e uiga i le fa'aogaina o le initaneti-qr-scanner.net meafaigaluega i luga ole laiga.</p> 
+    <h2>Tapulaa</h2> 
+    <h3>E te ioe e te le:</h3> 
+    <ul> 
+     <li>Fa'asoa le anotusi mo so'o se fa'amoemoe e aofia ai e aunoa ma se fa'atapula'aina le tu'ufa'atasia o se fa'amaumauga i totonu, toe tufatufaina atu po'o le toe gaosia o mea e ala i le lomitusi po'o fa'asalalauga po'o so'o se feso'otaiga faapisinisi, cable po'o satelite.</li> 
+     <li>Fausia galuega fa'atupu, toe fa'ainisinia, decompile, fa'a'ese'ese, fetu'una'i, fa'aliliu, fa'asalalau, fa'atulaga, fesuia'i, kopi, fusi, fa'atau, laisene laiti, auina atu i fafo, tu'ufa'atasia, fesiita'i, fetuuna'i, nogatupe, lisi, lisi, tofi, fa'asoa, outsource, talimalo, fa'asalalau, fa'aavanoaina i so'o se tagata po'o se isi fa'aoga, pe tuusa'o pe le tuusao, le anotusi/meafaigaluega i le atoaga po'o se vaega, i so'o se faiga po'o so'o se mea lava, pe faaletino, fa'aeletoroni po'o se isi mea.</li> 
+     <li>Fa'ataga, fa'ataga pe faia so'o se mea e ono solia ai pe fa'aleagaina ai aia tatau a le Kamupani po'o lana laisene po'o le fa'atagaina o so'o se isi vaega e fa'aoga i mea o lo'o iai/meafaigaluega. O tapula'a o lo'o fa'ata'atia i totonu o lenei Maliega e le tatau ona fa'aogaina i le fa'atapula'aina o tapula'a e fa'asaina e le tulafono talafeagai.</li> 
+     <li>Fa'aoga po'o le taumafai e fa'aoga le polokalame otometi e pu'e ai upegatafa'ilagi (fa'aigoa o le downloader website po'o le upega tafa'ilagi copier software) e fa'asaoina ai itulau e tele mai le upega tafa'ilagi mo so'o se fa'aoga, e aofia ai le va'aiga tuimotu.</li> 
+     <li>Fa'aoga bots.</li> 
+     <li>Fa'aoga polokalame poloka fa'asalalauga e taofia ai le utaina ma le fa'aalia o fa'asalalauga mai le upega tafa'ilagi.</li> 
+    </ul> 
+    <h2>Puipuiga o au Fa'amatalaga Patino</h2> 
+    <p>E leai se auala e puipuia ai faʻamatalaga e 100% saogalemu. online-qr-scanner.net e fa'aogaina le tele o tekonolosi ma faiga e fesoasoani e puipuia ai au fa'amatalaga patino mai le fa'atagaina, fa'aoga po'o le fa'aalia. online-qr-scanner.net fa'amautu fa'amatalaga fa'asinomaga e te tu'uina atu i luga o sapalai komipiuta i se si'osi'omaga fa'atonutonu, malupuipuia, puipuia mai le fa'atagaina, fa'aoga po'o le fa'aalia. A tu'uina atu fa'amatalaga patino (e pei o le numera o le credit card) i isi 'upega tafa'ilagi, e puipuia e ala i le fa'aogaina o fa'amatalaga, e pei o le Secure Socket Layer (SSL) protocol.</p> 
+    <h2>Suiga i lenei Faamatalaga</h2> 
+    <p>online-qr-scanner.net o le a faʻafouina i nisi taimi lenei Tuutuuga o Auaunaga e faʻaalia ai manatu o kamupani ma tagata faʻatau. Online-qr-scanner.net e fa'amalosia oe e toe iloilo i lea taimi ma lea Tu'utu'uga o Au'aunaga ina ia logoina pe fa'afefea ona puipuia e le online-qr-scanner.net au fa'amatalaga. Pe a faia sea suiga, o le a matou faʻafouina le "Last Updated" aso i lalo. O le fa'aogaina o lenei 'upega tafa'ilagi-qr-scanner.net e fa'ailoa ai lou taliaina o nei Tuutuuga o Auaunaga.</p> 
+   </main> 
+  </div> 
+  <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start"> 
+   <div class="container"> 
+    <p class="mb-0" not-translate>© 2022 Online QR Scanner.</p> 
+   </div> 
+  </footer>   
+ </body>
+</html>

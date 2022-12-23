@@ -1,3 +1,76 @@
+/* meetei-mayek */
+@font-face {
+  font-family: 'Noto Sans Meetei Mayek';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts//HTxAL3QyKieByqY9eZPFweO0be7M21uSphSdhqILnmrRfJ8t_1TJ_sSV7vkuFQ.woff2) format('woff2');
+  unicode-range: U+200C-200D, U+25CC, U+AAE0-AAF6, U+ABC0-ABFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Sans Meetei Mayek';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts//HTxAL3QyKieByqY9eZPFweO0be7M21uSphSdhqILnmrRfJ8t_1TJ_sTf7vkuFQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Sans Meetei Mayek';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/HTxAL3QyKieByqY9eZPFweO0be7M21uSphSdhqILnmrRfJ8t_1TJ_sTR7vk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:lang(am):lang(am) {
+    font-family: "Noto Sans Ethiopic",Arial,sans-serif
+}
+
+:lang(bn):lang(bn) {
+    font-family: "Lohit Bengali",Arial,sans-serif
+}
+
+:lang(dv):lang(dv) {
+    font-family: "Noto Sans Thaana",Arial,sans-serif
+}
+
+:lang(lo):lang(lo) {
+    font-family: "Dhyana",Arial,sans-serif
+}
+
+:lang(km):lang(km) {
+    font-family: "Nokora",Arial,sans-serif
+}
+
+:lang(ml):lang(ml) {
+    font-family: "Noto Sans Malayalam",Arial,sans-serif
+}
+
+:lang(mni-Mtei):lang(mni-Mtei) {
+    font-family: "Noto Sans Meetei Mayek",Arial,sans-serif;
+}
+
+:lang(my):lang(my) {
+    font-family: "Noto Sans Myanmar",Arial,sans-serif
+}
+
+:lang(ps):lang(ps) {
+    font-family: "Noto Naskh Arabic",Arial,sans-serif
+}
+
+:lang(sd):lang(sd) {
+    font-family: "Noto Naskh Arabic",Arial,sans-serif
+}
+
+:lang(si):lang(si) {
+    font-family: "Noto Sans Sinhala",Arial,sans-serif
+}
+
+:lang(ta):lang(ta) {
+    font-family: "Lohit Tamil",Arial,sans-serif
+}
+
 blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul {
     margin: 0;
     padding: 0
